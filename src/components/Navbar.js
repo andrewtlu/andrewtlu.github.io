@@ -6,12 +6,12 @@ function Navbar() {
   return (
     <nav>
       <div className='navbar'>
-        <div className='home'>
-          <Link to='/'>
+        <Link to='/'>
+          <div className='logo'>
             {/* Add logo here */}
             atl
-          </Link>
-        </div>
+          </div>
+        </Link>
         <div className='toggleMenu'>
           {/* Add hamburger here */}
           toggleMenu
