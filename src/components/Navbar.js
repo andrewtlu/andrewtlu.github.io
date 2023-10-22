@@ -1,25 +1,25 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import '../styles/Navbar.css'
 
 function Navbar() {
   return (
     <nav>
       <div className='navbar'>
-        <Link to='/'>
+        <NavLink to='/'>
           <div className='logo'>
             {/* Add logo here */}
             atl
           </div>
-        </Link>
+        </NavLink>
         <div className='toggleMenu'>
           {/* Add hamburger here */}
           toggleMenu
         </div>
         <ul className='links'>
-          <li><Link to='/about'>about</Link></li>
-          <li><Link to='/projects'>projects</Link></li>
-          <li><Link to='/contact'>contact</Link></li>
+          <NavLink to='/about'><li>about</li></NavLink>
+          <NavLink to='/projects'><li>projects</li></NavLink>
+          <NavLink to='/contact'><li>contact</li></NavLink>
         </ul>
       </div>
     </nav>
