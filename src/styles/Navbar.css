@@ -1,15 +1,19 @@
 nav {
+    position: relative;
     width: 100%;
     height: 80px;
     background: var(--secondary-bg);
     display: flex;
     justify-content: center;
     transition-duration: 0.1s;
+    z-index: 100;
 }
 
 .navbar {
     width: 1040px;
     max-width: min(85%, 100%); /* pick smaller: 85% or 1040px */
+    padding: 0 7.5vw;
+    border-radius: 0 0 3vw 3vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,7 +48,6 @@ nav {
 }
 
 .toggleMenu {
-    color: var(--text-lightest);
     display: none;
 }
 
@@ -74,6 +77,19 @@ nav {
 @media screen and (max-width: 850px) {
     nav {
         height: 60px;
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        background-color: var(--secondary-bg);
+    }
+
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .logo {
@@ -82,10 +98,37 @@ nav {
     }
 
     .toggleMenu {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        aspect-ratio: 1/1;
+        cursor: pointer;
     }
 
-    .links {
+    .burger {
+        background-color: var(--text-lightest);
+        margin: 0.2rem 0;
+        width: 1.5rem;
+        height: 0.2rem;
+        border-radius: 0.05rem;
+    }
+
+    #close .links {
         display: none;
+    }
+    
+    #open .links {
+        margin-left: -38px; /* janky but basically extend line to logo start */
+        display: block;
+        width: 100%;
+    }
+
+    #open li {
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        border-top: solid var(--main-bg) 1px;
     }
 }
