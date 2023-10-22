@@ -13,7 +13,7 @@ nav {
     width: 1040px;
     max-width: min(85%, 100%); /* pick smaller: 85% or 1040px */
     padding: 0 7.5vw;
-    border-radius: 0 0 3vw 3vw;
+    border-radius: 0 0 2vw 2vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,7 +32,7 @@ nav {
     justify-content: center;
 
     background-color: var(--text-lightest);
-    color: var(--secondary-bg);
+    color: var(--text-darkest);
     font-size: 22px;
     font-weight: 700;
 
@@ -54,14 +54,15 @@ nav {
 .links {
     list-style: none;
     display: flex;
+    height: 100%;
 }
 
 .links li {
     display: flex;
-    height: 80px; /* no problem because not visible <850px */
+    height: 100%;
     padding: 0 20px;
     align-items: center;
-    transition-duration: 0.3s;
+    transition: color 0.3s;
 }
 
 .links a:not(.active):hover li {
@@ -76,13 +77,13 @@ nav {
 
 @media screen and (max-width: 850px) {
     nav {
+        display: block;
         height: 60px;
-        flex-wrap: wrap;
     }
 
     .navbar {
         flex-wrap: wrap;
-        background-color: var(--secondary-bg);
+        overflow: visible;
     }
 
     .main {
@@ -113,22 +114,45 @@ nav {
         width: 1.5rem;
         height: 0.2rem;
         border-radius: 0.05rem;
+        transition: all 0.2s ease-out;
     }
 
-    #close .links {
-        display: none;
+    .links {
+        flex-direction: column;
+        background-color: var(--text-darker);
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        border-radius: 0 0 1rem 1rem;
+        
+        transform: scaleY(0);
+        transform-origin: top center;
+    }
+
+    .transition {
+        transition: transform 0.2s ease-out;
     }
     
-    #open .links {
-        margin-left: -38px; /* janky but basically extend line to logo start */
-        display: block;
-        width: 100%;
-    }
-
-    #open li {
+    .links li {
         height: 4rem;
         display: flex;
         justify-content: center;
-        border-top: solid var(--main-bg) 1px;
+    }
+
+    .links a:not(:last-child) {
+        border-bottom: solid var(--text-light) 1px;
+    }
+
+    #active.links {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    #active .top {
+        transform: rotate(-135deg) translate(-0.15rem, -0.25rem);
+    }
+
+    #active .bottom {
+        transform: rotate(135deg) translate(-0.1rem, 0.25rem);
     }
 }
