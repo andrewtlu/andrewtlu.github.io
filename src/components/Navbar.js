@@ -5,13 +5,15 @@ import '../styles/Navbar.css'
 function Navbar() {
   const [expandNavbar, setExpandNavbar] = useState(false);
   const [transition, setTransition] = useState(false);
-  const links = document.querySelector('.links');
 
   window.addEventListener('resize', function() { // disable transition when resizing
     setTransition(false);
   });
-  // TODO: hamburger flippy thingy (https://www.youtube.com/watch?v=gAGcjlJyKk0)
-  // TODO: smooth open
+  document.addEventListener('click', ({target}) => {
+    if (!target.matches('.navbar *')) {
+      setExpandNavbar(false);
+    }
+  });
 
   return (
     <nav>
@@ -21,7 +23,7 @@ function Navbar() {
           <NavLink to='/'>
             <div className='logo'>
               {/* Add logo here */}
-              atl
+              al.
             </div>
           </NavLink>
 
