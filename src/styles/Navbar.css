@@ -51,8 +51,11 @@ nav {
     display: none;
 }
 
-.links {
+ul {
     list-style: none;
+}
+
+.links {
     display: flex;
     height: 100%;
 }
@@ -106,6 +109,7 @@ nav {
         height: 60px;
         aspect-ratio: 1/1;
         cursor: pointer;
+        pointer-events: all;
     }
 
     .burger {
@@ -143,9 +147,14 @@ nav {
         border-bottom: solid var(--text-light) 1px;
     }
 
+    .navbar {
+        pointer-events: none;
+    }
+
     #active.links {
         opacity: 1;
         transform: scaleY(1);
+        pointer-events: all;
     }
 
     #active .top {
