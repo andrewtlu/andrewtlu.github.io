@@ -44,7 +44,7 @@ nav {
 }
 
 .logo:hover {
-    background-color: var(--text-lighter);
+    background-color: var(--text-lighter1);
 }
 
 .toggleMenu {
@@ -69,7 +69,7 @@ ul {
 }
 
 .links a:not(.active):hover li {
-    color: var(--text-lighter);
+    color: var(--text-lighter1);
 }
 
 .links a.active {

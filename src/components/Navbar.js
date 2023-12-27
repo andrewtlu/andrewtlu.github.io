@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
 import '../styles/Navbar.css'
 
 function Navbar() {
   const [expandNavbar, setExpandNavbar] = useState(false);
   const [transition, setTransition] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setExpandNavbar(false);
+  }, [location]);
 
   window.addEventListener('resize', function() { // disable transition when resizing
     setTransition(false);
@@ -38,7 +43,6 @@ function Navbar() {
         
         <ul className={'links ' + (transition && 'transition')} id={expandNavbar && 'active'}>
           <NavLink to='/about'><li>about</li></NavLink>
-          <NavLink to='/projects'><li>projects</li></NavLink>
           <NavLink to='/contact'><li>contact</li></NavLink>
         </ul>
       </div>
