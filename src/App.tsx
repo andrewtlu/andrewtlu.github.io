@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { GitHub, Instagram, LinkedIn, Email, Resume } from './components/svgs.tsx'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -8,26 +9,26 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header>
+        {/* sticky, do gradient stroke w/ non sticky background element? or numbers idk */}
+        <h1>Hey! I'm Andrew.</h1>
+        <h2>CS Undergrad @ Emory</h2>
+        <p>Currently combatting procrastination and imposter syndrome :P</p>
+        <ul>
+          <li>About</li>
+          <li>Experience</li>
+          <li>Involvement</li>
+          <li>Projects</li>
+          <li>Contact</li>
+        </ul>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', fill: 'black'}}>
+          <GitHub />
+          <Instagram />
+          <LinkedIn />
+          <Email />
+          <Resume />
+        </div>
+      </header>
     </>
   )
 }
