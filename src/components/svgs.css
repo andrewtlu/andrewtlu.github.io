@@ -1,0 +1,11 @@
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--contrast-base);
+}
+
+.socials li {
+  margin: 0 1rem;
+  list-style: none;
+}

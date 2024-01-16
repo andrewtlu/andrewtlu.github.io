@@ -1,0 +1,35 @@
+/* header styles */
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 40%;
+  height: 100vh;
+
+  padding: 5rem 1rem;
+
+  border: solid var(--accent-1);
+  border-width: 0 2px;
+
+  background-color: var(--mantle);
+}
+
+header h1 {
+  margin-bottom: 1rem;
+}
+
+header h2 {
+  margin-bottom: 1rem;
+  color: var(--contrast-mantle)
+}
+
+header .body {
+  margin-bottom: 3rem;
+  color: var(--contrast-crust)
+}
+
+header li {
+  margin: 0.5rem 0;
+}
