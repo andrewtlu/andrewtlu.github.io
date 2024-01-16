@@ -34,7 +34,7 @@ function App() {
         <Socials />
       </header>
       <main>
-        <section id="about">
+        <section id='about'>
           <p className='body'>
             I'm a second year student studying CS at Emory University with a passion for backend dev. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec augue id nibh aliquam vulputate. Aenean sem tortor, vulputate vel laoreet ac, malesuada eget ante. Vivamus aliquet vulputate malesuada.
           </p>
@@ -46,19 +46,19 @@ function App() {
           </p>
         </section>
         
-        <section id="experience">
+        <section id='experience'>
 
         </section>
 
-        <section id="involvement">
+        <section id='involvement'>
           
         </section>
 
-        <section id="projects">
+        <section id='projects'>
 
         </section>
 
-        <section id="contact">
+        <section id='contact'>
           
         </section>
       </main>
