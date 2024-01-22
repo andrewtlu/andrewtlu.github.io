@@ -6,9 +6,72 @@ main {
 }
 
 section {
-  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section:not(:last-of-type) {
+  padding-bottom: 3rem;
+}
+
+.line {
+  position: relative;
+}
+
+.line::before {
+  content: '';
+  position: absolute;
+  float: left;
+  
+  left: -20px;
+  width: 4rem;
+  height: 100%;
+
+  z-index: -1;
+
+  border-right: var(--thickness) solid var(--accent-1);
+}
+
+.startline::before {
+  content: '';
+  position: absolute;
+
+  margin: -20px 0 0 -1.25rem;
+  width: 4rem;
+  height: 20px;
+
+  z-index: -1;
+
+  border-color: var(--accent-1);
+  border-top-style: solid;
+  border-right-style: solid;
+  border-radius: 0 20px 0 0;
+  border-width: var(--thickness);
+}
+
+.endline::after {
+  content: '';
+  position: absolute;
+
+  margin: 0 0 0 -1.25rem; /* see #section for y offset (section margin) */
+  width: 4rem;
+  height: 20px;
+
+  z-index: -1;
+
+  border-color: var(--accent-1);
+  border-bottom-style: solid;
+  border-right-style: solid;
+  border-radius: 0 0 20px 0;
+  border-width: var(--thickness);
 }
 
 #about .body:not(:last-of-type) {
   margin-bottom: 1rem;
+}
+
+#experience>div:not(:last-of-type) {
+  margin-bottom: 2rem;
 }

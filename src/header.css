@@ -1,6 +1,9 @@
 /* header styles */
 
 header {
+  position: sticky;
+  top: 0;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11,7 +14,7 @@ header {
   padding: 5rem 1rem;
 
   border: solid var(--accent-1);
-  border-width: 0 2px;
+  border-width: 0 var(--thickness);
 
   background-color: var(--mantle);
 }

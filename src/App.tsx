@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import { GitHub, Instagram, LinkedIn, Email, Resume, Socials } from './components/svgs.tsx'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Socials } from './components/svgs.tsx'
 import './App.css'
+import { ExperiencePane } from './components/panes.tsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -46,21 +45,47 @@ function App() {
           </p>
         </section>
         
-        <section id='experience'>
+        <div className='startline'></div>
 
+        <section id='experience' className='line'>
+          <ExperiencePane
+            pos='Software Engineer'
+            employer='Kerygma Digital'
+            date='Jun 2023 - Aug 2023'
+            desc={'Developed and improved BibleBot\'s easy quick reference features for 4m+ users across 51,000+ Discord servers, \nReduced service response latency by 60% (~400 ms) by implementing a custom configurable time-to-live HTTP cache'}
+            skills={['C#', 'ASP.NET', 'HTTP', 'Git']}
+          />
+
+          <ExperiencePane
+            pos='Software Engineer'
+            employer='Kerygma Digital'
+            date='Jun 2023 - Aug 2023'
+            desc={'Developed and improved BibleBot\'s easy quick reference features for 4m+ users across 51,000+ Discord servers, \nReduced service response latency by 60% (~400 ms) by implementing a custom configurable time-to-live HTTP cache'}
+            skills={['C#', 'ASP.NET', 'HTTP', 'Git']}
+          />
+
+          <ExperiencePane
+            pos='Software Engineer'
+            employer='Kerygma Digital'
+            date='Jun 2023 - Aug 2023'
+            desc={'Developed and improved BibleBot\'s easy quick reference features for 4m+ users across 51,000+ Discord servers, \nReduced service response latency by 60% (~400 ms) by implementing a custom configurable time-to-live HTTP cache'}
+            skills={['C#', 'ASP.NET', 'HTTP', 'Git']}
+          />
         </section>
 
-        <section id='involvement'>
-          
+        <section id='involvement' className='line'>
+          test
         </section>
 
-        <section id='projects'>
-
+        <section id='projects' className='line'>
+          test
         </section>
 
-        <section id='contact'>
-          
+        <section id='contact' className='line'>
+          test
         </section>
+
+        <div className='endline'></div>
       </main>
     </div>
   )

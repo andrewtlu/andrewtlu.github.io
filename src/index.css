@@ -100,9 +100,9 @@ body {
 }
 
 /* light mode */
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
-    /* light color palette */
+    light color palette
     --base: #eff1f5;
     --mantle: #dce0e8;
     --crust: #ccd0da;
@@ -115,4 +115,4 @@ body {
     --accent-1: #dd7878;
     --accent-2: #7287fd;
   }
-}
+} */
