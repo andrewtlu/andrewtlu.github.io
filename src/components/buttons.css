@@ -1,0 +1,26 @@
+/* we love the !important tag */
+
+.skillbutton {
+  display: inline-flex;
+  padding: 7px 12px 7px 12px;
+  gap: 10px;
+  align-items: center;
+  font-weight: 500;
+
+  background-color: var(--mantle);
+  color: var(--contrast-crust) !important;
+  border: var(--thickness) solid var(--accent-1);
+  border-radius: 50px;
+
+  transition: var(--animation);
+}
+
+.skillbutton:hover {
+  background-color: var(--accent-1) !important;
+  color: var(--base) !important;
+}
+
+#selected {
+  background-color: var(--accent-1);
+  color: var(--base) !important;
+}

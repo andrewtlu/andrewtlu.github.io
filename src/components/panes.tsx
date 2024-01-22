@@ -1,3 +1,4 @@
+import { Button } from './buttons.tsx';
 import './panes.css'
 import './svgs.tsx'
 import { Arrow } from './svgs.tsx';
@@ -5,7 +6,7 @@ import { Arrow } from './svgs.tsx';
 interface ExperiencePaneProps {
   pos: string;
   employer: string;
-  date: Date;
+  date: string // Date;
   desc: string;
   skills: string[];
 }
@@ -15,24 +16,38 @@ function formatDate(date: Date): string {
   return (month[date.getMonth()] + ' ' +  date.getFullYear())
 }
 
-export function Experience(props: ExperiencePaneProps) {
+export function ExperiencePane(props: ExperiencePaneProps) {
   return (
-    <div>
-      <div>
-        {/* pane header */}
+    <div className='experiencepane'>
+      <div className='paneheader'>
         <Arrow /> {/* TODO: animate rotate */}
-        {props.pos}
+        <span className='role body'>
+          {props.pos}
+        </span>
       </div>
-      <div>
-        {/* pane body */}
-        <div>
-          {props.employer}
-          {formatDate(props.date)}
+
+      <div className='panebody'>
+        <div className='subheader'>
+          <span className='small employer'>
+            {props.employer}
+          </span>
+          <span className='small'>
+            {props.date /*formatDate(props.date)*/}
+          </span>
         </div>
-        <div>
+
+        <div className='small'>
           {props.desc}
-          {/* TODO: for loop for each skill */}
-          {/* TODO: button components */}
+        </div>
+
+        <div className='skills'>
+          {
+            props.skills.map(skill => {
+              return (
+                <Button skill={skill} />
+              )
+            })
+          }
         </div>
       </div>
     </div>
