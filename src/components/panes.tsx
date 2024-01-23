@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { Button } from './buttons.tsx';
 import './panes.css'
 import './svgs.tsx'
 import { Arrow } from './svgs.tsx';
+
+// used really janky height solution for animation, if problems with rendering check max-height property of .panebody>.small
 
 interface ExperiencePaneProps {
   pos: string;
@@ -17,9 +20,14 @@ function formatDate(date: Date): string {
 }
 
 export function ExperiencePane(props: ExperiencePaneProps) {
+  const [closed, setClosed] = useState(false);
+
   return (
-    <div className='experiencepane'>
-      <div className='paneheader'>
+    <div className='experiencepane' id={closed ? 'closed' : 'opened'}>
+      <div
+        className='paneheader'
+        onClick={() => setClosed((closed) => !closed)}
+      >
         <Arrow /> {/* TODO: animate rotate */}
         <span className='role body'>
           {props.pos}

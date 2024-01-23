@@ -1,17 +1,24 @@
 .experiencepane {
   flex-shrink: 0;
   width: 90%;
+  /* opacity: 0; */ /* for testing line alignment */
 }
 
 .paneheader {
   display: flex;
   align-items: center;
-  padding: 8px 0;
+  gap: 4px;
+  padding: 8px 6px;
 
   width: 100%;
   border-radius: 5px 5px 0 0;
   border: var(--thickness) solid var(--accent-1); /* TODO w/ button: relative to container body */
   background: var(--crust);
+}
+
+.paneheader .arrow {
+  transition: var(--animation);
+  transform: rotate(90deg);
 }
 
 .paneheader .role {
@@ -25,7 +32,10 @@
   align-items: flex-start;
   gap: 10px;
 
+  transition: var(--animation);
+
   width: 100%;
+  height: auto;
   padding: 12px 20px 12px 20px;
   background: var(--mantle);
   border-radius: 0 0 5px 5px;
@@ -46,8 +56,26 @@
   font-weight: 600 !important;
 }
 
+.panebody>.small {
+  transition: all 0.15s linear; /* not using --animation variable because max-height fix messes with timings */
+  overflow-y: hidden;
+  max-height: 6.5rem; /* here is the janky fix I was talking about */
+}
+
 .skills {
   display: flex;
   align-items: flex-start;
   gap: 8px;
+}
+
+#closed>.panebody>.small/*, #closed .skills */{
+  /* transform: scaleY(0);
+  transform-origin: top; */
+  /* display: none; */
+  
+  max-height: 0;
+}
+
+#closed .arrow {
+  transform: rotate(0deg);
 }

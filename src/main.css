@@ -3,6 +3,8 @@
 main {
   margin: 5rem 1rem;
   width: 60%;
+  display: flex;
+  flex-direction: column;
 }
 
 section {
@@ -23,10 +25,9 @@ section:not(:last-of-type) {
 .line::before {
   content: '';
   position: absolute;
-  float: left;
   
   left: -20px;
-  width: 4rem;
+  width: 4.25rem;
   height: 100%;
 
   z-index: -1;
@@ -39,7 +40,7 @@ section:not(:last-of-type) {
   position: absolute;
 
   margin: -20px 0 0 -1.25rem;
-  width: 4rem;
+  width: 4.25rem;
   height: 20px;
 
   z-index: -1;
@@ -51,12 +52,16 @@ section:not(:last-of-type) {
   border-width: var(--thickness);
 }
 
+.endline {
+  margin-bottom: 3rem;
+}
+
 .endline::after {
   content: '';
   position: absolute;
 
   margin: 0 0 0 -1.25rem; /* see #section for y offset (section margin) */
-  width: 4rem;
+  width: 4.25rem;
   height: 20px;
 
   z-index: -1;
@@ -74,4 +79,9 @@ section:not(:last-of-type) {
 
 #experience>div:not(:last-of-type) {
   margin-bottom: 2rem;
+}
+
+footer {
+  align-self: center;
+  width: 90%;
 }

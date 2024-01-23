@@ -86,6 +86,8 @@ function App() {
         </section>
 
         <div className='endline'></div>
+
+        <footer className='small'>Made with &lt;3 by yours truly. Designed in Figma, built with React, TypeScript, and Vite. If you're interested, get a sneak peak of my thought process and read the dev log here!</footer>
       </main>
     </div>
   )
