@@ -8,9 +8,17 @@ import { Chat, DropdownArrow, RedirectArrow, ResumeNoA } from './svgs.tsx';
 
 interface ExperiencePaneProps {
   pos: string;
-  employer: string;
+  group: string;
   date: string // Date;
   desc: string;
+  skills: string[];
+}
+
+interface ProjectPaneProps {
+  name: string;
+  url: string;
+  desc: string;
+  img: string;
   skills: string[];
 }
 
@@ -37,7 +45,7 @@ export function ExperiencePane(props: ExperiencePaneProps) {
       <div className='panebody'>
         <div className='subheader'>
           <span className='small employer'>
-            {props.employer}
+            {props.group}
           </span>
           <span className='small'>
             {props.date /*formatDate(props.date)*/}
@@ -72,6 +80,30 @@ export function ResumePane() {
       <RedirectArrow />
     </div>
   );
+}
+
+export function ProjectPane(props: ProjectPaneProps) {
+  return (
+    <div className='projectpane'>
+      <img src={props.img} alt={props.name + ' image'} />
+      <div className='projectbody'>
+        <div className='projectheader'>
+          <p className='body'>{props.name}</p>
+          <RedirectArrow />
+        </div>
+        <div className='small'>
+          {props.desc}
+        </div>
+        <div className='skills'>
+          {props.skills.map(skill => {
+            return (
+              <SkillButton skill={skill} />
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export function ContactPane() {

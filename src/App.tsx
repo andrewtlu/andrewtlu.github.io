@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Socials } from './components/svgs.tsx'
 import './App.css'
-import { ContactPane, ExperiencePane, ResumePane } from './components/panes.tsx'
+import { ContactPane, ExperiencePane, ProjectPane, ResumePane } from './components/panes.tsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -47,10 +47,12 @@ function App() {
         
         <div className='startline'></div>
 
+        {/* TODO: gradient, hover effects, smart collapse */}
+
         <section id='experience' className='line'>
           <ExperiencePane
             pos='Software Engineer'
-            employer='Kerygma Digital'
+            group='Kerygma Digital'
             date='Jun 2023 - Aug 2023'
             desc={'Developed and improved BibleBot\'s easy quick reference features for 4m+ users across 51,000+ Discord servers, \nReduced service response latency by 60% (~400 ms) by implementing a custom configurable time-to-live HTTP cache'}
             skills={['C#', 'ASP.NET', 'HTTP', 'Git']}
@@ -58,7 +60,7 @@ function App() {
 
           <ExperiencePane
             pos='Software Engineer'
-            employer='Kerygma Digital'
+            group='Kerygma Digital'
             date='Jun 2023 - Aug 2023'
             desc={'Developed and improved BibleBot\'s easy quick reference features for 4m+ users across 51,000+ Discord servers, \nReduced service response latency by 60% (~400 ms) by implementing a custom configurable time-to-live HTTP cache'}
             skills={['C#', 'ASP.NET', 'HTTP', 'Git']}
@@ -66,7 +68,7 @@ function App() {
 
           <ExperiencePane
             pos='Software Engineer'
-            employer='Kerygma Digital'
+            group='Kerygma Digital'
             date='Jun 2023 - Aug 2023'
             desc={'Developed and improved BibleBot\'s easy quick reference features for 4m+ users across 51,000+ Discord servers, \nReduced service response latency by 60% (~400 ms) by implementing a custom configurable time-to-live HTTP cache'}
             skills={['C#', 'ASP.NET', 'HTTP', 'Git']}
@@ -74,15 +76,40 @@ function App() {
         </section>
 
         <section id='involvement' className='line'>
+          <ExperiencePane
+            pos='Project Lead'
+            group='Project Emory'
+            date='Aug 2023 - Present'
+            desc={'Lead development of the RIDEmory project, teaching project engineers technology such as MVC frameworks, Git, and React in order to provide easy access to automatically compiled rideshare information across Emory\'s campus.'}
+            skills={['Spring Boot', 'React', 'SCSS', 'Git', 'Flask', 'Figma', 'Canva']}
+          />
+
           <ResumePane />
         </section>
 
         <section id='projects' className='line'>
-          test
+          <div className='projects'>
+            <ProjectPane
+              name='RIDEmory'
+              url=''
+              desc='A self-updating database of ride information for Emory students accessible either via the web or GroupMe.'
+              img='src/assets/ridemory.png'
+              skills={['Spring Boot', 'React', 'SCSS', 'Flask', 'Figma']}
+            />
+
+            <ProjectPane
+              name='Personal Website'
+              url=''
+              desc='The personal portfolio website you are currently reading! I built this in order to teach myself frontend software and design skills to better support my project team in Project Emory.'
+              img='src/assets/website.png'
+              skills={['React', 'TypeScript', 'Figma']}
+            />
+          </div>
         </section>
 
         <section id='contact' className='line'>
           <ContactPane />
+          {/* TODO: prettier contact pane */}
         </section>
 
         <div className='endline'></div>

@@ -7,7 +7,7 @@
   align-items: center;
   font-weight: 500;
 
-  background-color: var(--mantle);
+  background-color: var(--crust);
   color: var(--contrast-crust) !important;
   border: var(--thickness) solid var(--accent-1);
   border-radius: 50px;

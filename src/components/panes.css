@@ -66,6 +66,7 @@
 .skills {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -100,6 +101,47 @@
 
 .resumepane a {
   color: var(--contrast-overlay);
+}
+
+.projectpane {
+  width: 100%;
+
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background-color: var(--mantle);
+  border-radius: 5px;
+}
+
+.projectpane:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+img {
+  max-width: 40%;
+  aspect-ratio: 16/9;
+
+  object-fit: cover;
+  object-position: top;
+  border-radius: 5px;
+  border: var(--thickness) solid var(--crust)
+}
+
+.projectheader {
+  display: flex;
+  align-items: center;
+}
+
+.projectheader .body, .projectheader .redirect {
+  color: var(--contrast-crust);
+  font-weight: 600 !important;
+}
+
+.projectbody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .contactpane {
