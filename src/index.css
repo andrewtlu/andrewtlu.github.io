@@ -29,6 +29,7 @@
   color-scheme: light dark;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: normal;
+  text-justify: center;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

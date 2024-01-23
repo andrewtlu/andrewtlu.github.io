@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from './buttons.tsx';
 import './panes.css'
 import './svgs.tsx'
-import { Arrow } from './svgs.tsx';
+import { DropdownArrow, RedirectArrow, ResumeNoA } from './svgs.tsx';
 
 // used really janky height solution for animation, if problems with rendering check max-height property of .panebody>.small
 
@@ -28,7 +28,7 @@ export function ExperiencePane(props: ExperiencePaneProps) {
         className='paneheader'
         onClick={() => setClosed((closed) => !closed)}
       >
-        <Arrow /> {/* TODO: animate rotate */}
+        <DropdownArrow /> {/* TODO: animate rotate */}
         <span className='role body'>
           {props.pos}
         </span>
@@ -57,6 +57,31 @@ export function ExperiencePane(props: ExperiencePaneProps) {
             })
           }
         </div>
+      </div>
+    </div>
+  );
+}
+
+export function ResumePane() {
+  return (
+    <div className='resumepane paneheader'>
+      <div className='content'>
+          <ResumeNoA />
+          <h2 className='role'>View Full Resume</h2>
+      </div>
+      <RedirectArrow />
+    </div>
+  );
+}
+
+export function ContactPane() {
+  return (
+    <div className='contactpane'>
+      <div className='paneheader'>
+
+      </div>
+      <div className='panebody'>
+
       </div>
     </div>
   );

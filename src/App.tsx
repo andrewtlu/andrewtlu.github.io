@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Socials } from './components/svgs.tsx'
 import './App.css'
-import { ExperiencePane } from './components/panes.tsx'
+import { ExperiencePane, ResumePane } from './components/panes.tsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -74,7 +74,7 @@ function App() {
         </section>
 
         <section id='involvement' className='line'>
-          test
+          <ResumePane />
         </section>
 
         <section id='projects' className='line'>

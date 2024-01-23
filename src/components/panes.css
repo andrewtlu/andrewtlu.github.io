@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 8px 6px;
+  padding: 8px 5px;
 
   width: 100%;
   border-radius: 5px 5px 0 0;
@@ -78,4 +78,25 @@
 
 #closed .arrow {
   transform: rotate(0deg);
+}
+
+.resumepane {
+  width: 90%;
+  padding: 8px 10px 8px 8px;
+  border-radius: 5px;
+
+  justify-content: space-between;
+  color: var(--contrast-overlay);
+}
+
+.resumepane .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  
+}
+
+.resumepane a {
+  color: var(--contrast-overlay);
 }
