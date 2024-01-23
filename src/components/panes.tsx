@@ -14,6 +14,12 @@ interface ExperiencePaneProps {
   skills: string[];
 }
 
+interface InfoPaneProps {
+  text: string;
+  url: string;
+  border: boolean;
+}
+
 interface ProjectPaneProps {
   name: string;
   url: string;
@@ -70,12 +76,12 @@ export function ExperiencePane(props: ExperiencePaneProps) {
   );
 }
 
-export function ResumePane() {
+export function InfoPane(props: InfoPaneProps) {
   return (
-    <div className='resumepane paneheader'>
+    <div className='infopane paneheader' id={props.border ? 'border' : 'borderless'}>
       <div className='content'>
           <ResumeNoA />
-          <h2 className='role'>View Full Resume</h2>
+          <h2 className='role'>{props.text}</h2>
       </div>
       <RedirectArrow />
     </div>

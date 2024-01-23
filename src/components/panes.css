@@ -1,14 +1,10 @@
-.experiencepane {
-  flex-shrink: 0;
-  width: 90%;
-  /* opacity: 0; */ /* for testing line alignment */
-}
-
 .paneheader {
   display: flex;
   align-items: center;
   gap: 4px;
   padding: 8px 5px;
+
+  cursor: pointer;
 
   width: 100%;
   border-radius: 5px 5px 0 0;
@@ -70,11 +66,15 @@
   gap: 8px;
 }
 
+#closed>.panebody {
+  gap: 5px;
+}
+
 #closed>.panebody>.small/*, #closed .skills */{
   /* transform: scaleY(0);
   transform-origin: top; */
   /* display: none; */
-  
+
   max-height: 0;
 }
 
@@ -82,16 +82,16 @@
   transform: rotate(0deg);
 }
 
-.resumepane {
-  width: 90%;
+.infopane {
   padding: 8px 10px 8px 8px;
   border-radius: 5px;
 
   justify-content: space-between;
+  background-color: var(--mantle);
   color: var(--contrast-overlay);
 }
 
-.resumepane .content {
+.infopane .content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,8 +99,12 @@
   
 }
 
-.resumepane a {
+.infopane a {
   color: var(--contrast-overlay);
+}
+
+#borderless {
+  border: none;
 }
 
 .projectpane {
@@ -144,13 +148,10 @@ img {
   gap: 10px;
 }
 
-.contactpane {
-  width: 90%;
-}
-
 .contactpane .paneheader {
   gap: 6px;
   padding: 6px 6px;
+  cursor: default;
 }
 
 .paneheader .chat {

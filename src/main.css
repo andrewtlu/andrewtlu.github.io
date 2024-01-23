@@ -77,11 +77,11 @@ section:not(:last-of-type) {
   margin-bottom: 1rem;
 }
 
-#experience>div:not(:last-of-type) {
-  margin-bottom: 2rem;
+.narrowcontent {
+  width: var(--content-width);
 }
 
-#involvement>div:not(:last-of-type) {
+.narrowcontent>div:not(:last-of-type) {
   margin-bottom: 2rem;
 }
 
@@ -90,7 +90,7 @@ section:not(:last-of-type) {
   flex-direction: column;
   gap: 10px;
 
-  box-shadow: 0.5rem 0.5rem 0 var(--accent-1), 1rem 1rem 0 var(--crust);
+  box-shadow: 0.5rem 0.5rem 0 var(--accent-1)/*, 1rem 1rem 0 var(--crust)*/;
   padding: 10px;
   
   background-color: var(--crust);
@@ -99,8 +99,7 @@ section:not(:last-of-type) {
   border-radius: 5px;
   width: 100%;
 }
-
 footer {
   align-self: center;
-  width: 90%;
+  width: var(--content-width);
 }

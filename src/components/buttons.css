@@ -1,5 +1,9 @@
 /* we love the !important tag */
 
+button {
+  cursor: pointer;
+}
+
 .skillbutton {
   display: inline-flex;
   padding: 7px 12px 7px 12px;
