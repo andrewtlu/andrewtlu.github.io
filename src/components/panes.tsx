@@ -28,10 +28,10 @@ interface ProjectPaneProps {
   skills: string[];
 }
 
-function formatDate(date: Date): string {
-  const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-  return (month[date.getMonth()] + ' ' +  date.getFullYear())
-}
+// function formatDate(date: Date): string {
+//   const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+//   return (month[date.getMonth()] + ' ' +  date.getFullYear())
+// }
 
 export function ExperiencePane(props: ExperiencePaneProps) {
   const [closed, setClosed] = useState(false);

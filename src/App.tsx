@@ -1,11 +1,8 @@
-import { useState } from 'react'
 import { Socials } from './components/svgs.tsx'
 import './App.css'
 import { ContactPane, ExperiencePane, ProjectPane, InfoPane } from './components/panes.tsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className='content'>
       <header>
