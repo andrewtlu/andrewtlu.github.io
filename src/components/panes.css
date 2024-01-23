@@ -19,6 +19,7 @@
 .paneheader .arrow {
   transition: var(--animation);
   transform: rotate(90deg);
+  color: var(--contrast-overlay);
 }
 
 .paneheader .role {
@@ -99,4 +100,21 @@
 
 .resumepane a {
   color: var(--contrast-overlay);
+}
+
+.contactpane {
+  width: 90%;
+}
+
+.contactpane .paneheader {
+  gap: 6px;
+  padding: 6px 6px;
+}
+
+.paneheader .chat {
+  color: var(--contrast-overlay);
+}
+
+.contactpane .panebody {
+  align-items: center;
 }

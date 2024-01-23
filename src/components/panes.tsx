@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { Button } from './buttons.tsx';
+import { HiButton, SkillButton } from './buttons.tsx';
 import './panes.css'
 import './svgs.tsx'
-import { DropdownArrow, RedirectArrow, ResumeNoA } from './svgs.tsx';
+import { Chat, DropdownArrow, RedirectArrow, ResumeNoA } from './svgs.tsx';
 
 // used really janky height solution for animation, if problems with rendering check max-height property of .panebody>.small
 
@@ -28,7 +28,7 @@ export function ExperiencePane(props: ExperiencePaneProps) {
         className='paneheader'
         onClick={() => setClosed((closed) => !closed)}
       >
-        <DropdownArrow /> {/* TODO: animate rotate */}
+        <DropdownArrow />
         <span className='role body'>
           {props.pos}
         </span>
@@ -52,7 +52,7 @@ export function ExperiencePane(props: ExperiencePaneProps) {
           {
             props.skills.map(skill => {
               return (
-                <Button skill={skill} />
+                <SkillButton skill={skill} />
               )
             })
           }
@@ -78,10 +78,12 @@ export function ContactPane() {
   return (
     <div className='contactpane'>
       <div className='paneheader'>
-
+        <Chat />
+        <h2 className='role'>Want to chat? Let's talk!</h2>
       </div>
-      <div className='panebody'>
-
+      <div className='panebody body'>
+        Whether you want to talk about my projects, backpacking gear, or even Minecraft, my inbox is open!
+        <HiButton />
       </div>
     </div>
   );

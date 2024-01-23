@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './buttons.css'
 
 // TODO: inherit accent color
-export function Button(props: {skill: string}) {
+export function SkillButton(props: {skill: string}) {
   const [selected, setSelected] = useState(false);
 
   return (
@@ -15,4 +15,14 @@ export function Button(props: {skill: string}) {
       {props.skill}
     </button>
   );
+}
+
+export function HiButton() {
+  return (
+    <a href="mailto:andrewlulu2012@gmail.com">
+      <button className='hibutton'>
+        Say hi!
+      </button>
+    </a>
+  )
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Socials } from './components/svgs.tsx'
 import './App.css'
-import { ExperiencePane, ResumePane } from './components/panes.tsx'
+import { ContactPane, ExperiencePane, ResumePane } from './components/panes.tsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -82,7 +82,7 @@ function App() {
         </section>
 
         <section id='contact' className='line'>
-          test
+          <ContactPane />
         </section>
 
         <div className='endline'></div>
