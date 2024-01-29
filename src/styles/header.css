@@ -93,18 +93,18 @@ header .body {
     border: none;
     background-image: linear-gradient(var(--mantle), var(--base));
   }
-}
 
-header h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  letter-spacing: -0.08rem;
-}
-
-header .body {
-  margin-bottom: 1rem;
-}
-
-.small {
-  display: none;
+  header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -0.08rem;
+  }
+  
+  header .body {
+    margin-bottom: 1rem;
+  }
+  
+  .small {
+    display: none;
+  }
 }
