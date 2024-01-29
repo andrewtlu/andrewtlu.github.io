@@ -122,3 +122,15 @@ body {
     --accent-2: #7287fd;
   }
 } */
+
+@media screen and (max-width: 1023px) {
+  body {
+    border: var(--thickness) solid var(--accent);
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+}

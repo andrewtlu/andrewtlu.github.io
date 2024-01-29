@@ -49,6 +49,8 @@ header .body {
 
 .selection {
   width: 0;
+  height: var(--thickness);
+  background-color: var(--accent);
   transition: all 0.2s ease-out;
 }
 
@@ -76,4 +78,33 @@ header .body {
 
 .socials a:hover {
   color: var(--contrast-base);
+}
+
+
+/* responsive */
+
+@media screen and (max-width: 1023px) {
+  header {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 5rem 5% 0 5%;
+
+    border: none;
+    background-image: linear-gradient(var(--mantle), var(--base));
+  }
+}
+
+header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.08rem;
+}
+
+header .body {
+  margin-bottom: 1rem;
+}
+
+.small {
+  display: none;
 }

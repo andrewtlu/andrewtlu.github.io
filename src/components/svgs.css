@@ -1,11 +1,10 @@
 .socials {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   color: var(--contrast-base);
 }
 
 .socials li {
-  margin: 0 1rem;
   list-style: none;
 }
