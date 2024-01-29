@@ -3,11 +3,30 @@ import './App.css'
 import { ContactPane, ExperiencePane, ProjectPane, InfoPane } from './components/panes.tsx'
 import { useEffect } from 'react';
 
+function debounce(func: Function, delay: number) {
+  let timeout: number;
+  return (...args: any[]) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), delay);
+  };
+};
+
 // clear active id
 function unselectElements(elements: (Element | null)[]) {
   elements.forEach(unselect => {
     if (unselect instanceof Element) {
       unselect.id = '';
+    }
+  });
+}
+
+function updateNavClicks(navElements: (Element | null)[]) {
+  navElements.forEach(element => {
+    if (element instanceof Element) {
+      element.addEventListener('click', () => {
+        unselectElements(navElements);
+        element.id = 'active';
+      })
     }
   });
 }
@@ -21,23 +40,33 @@ function App() {
       document.querySelector('ul.small .projects'),
       document.querySelector('ul.small .contact'),
     ];
+    const sections = document.querySelectorAll('section');
+
+    updateNavClicks(navElements);
+    // updateIntersection(); // TODO: color changing
     
-    // update navbar clicks
-    navElements.forEach(element => {
-      if (element instanceof Element) {
-        element.addEventListener('click', () => {
-          unselectElements(navElements);
-          element.id = 'active';
-        })
+    const scrollHandler = () => {
+      for (let i = 0; i < sections.length; i++) {
+        let clientView = sections[i].getBoundingClientRect();
+        if (clientView.top <= 0 && clientView.bottom >= 32) {
+          // change accent color
+          document.documentElement.style.setProperty('--accent', i % 2 == 1 ? 'var(--accent-1)' : 'var(--accent-2)');
+          
+          // update nav
+          let element = navElements[i]
+          if (element instanceof Element) {
+            unselectElements(navElements);
+            element.id = 'active';
+          }
+
+          break;
+        }
       }
-    });
+    };
+
+    document.addEventListener('scroll', debounce(scrollHandler, 250))
   }, []);
   
-    // const observer = new IntersectionObserver(entries => {
-    //   entries.forEach(entry => {
-        
-    //   })
-    // });
   
   return (
     <div className='content'>
@@ -46,7 +75,9 @@ function App() {
         <div className='header-text'>
           {/* TODO: link to own website */}
           <div>
-            <h1>Hey! I'm Andrew.</h1>
+            <h1>
+              <a href="./">Hey! I'm Andrew.</a>
+            </h1>
             <h2>CS Undergrad @ Emory</h2>
             <p className='body'>Currently combatting procrastination and imposter syndrome :P</p>
           </div>
