@@ -13,7 +13,7 @@ header {
 
   padding: 5rem 1rem;
 
-  border: solid var(--accent-1);
+  border: solid var(--accent);
   border-width: 0 var(--thickness);
 
   background-color: var(--mantle);
@@ -25,14 +25,66 @@ header h1 {
 
 header h2 {
   margin-bottom: 1rem;
-  color: var(--contrast-mantle)
+  color: var(--contrast-mantle);
 }
 
 header .body {
-  margin-bottom: 3rem;
-  color: var(--contrast-crust)
+  color: var(--contrast-crust);
+  margin-bottom: 6rem;
 }
 
 header li {
   margin: 0.5rem 0;
+}
+
+/* nav styles */
+
+.small li {
+  position: relative;
+  color: var(--overlay);
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.small li::before {
+  display: block;
+  content: '';
+  
+  float: left;
+  margin: 0.45rem 0 0 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+.small #active {
+  color: var(--contrast-base);
+  margin-top: 1rem;
+}
+
+.small #active::before {
+  display: block;
+  content: '';
+  
+  float: left;
+  margin: 0.45rem 1rem 0 0;
+  width: 4rem;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+
+/* socials styles */
+
+.socials a {
+  font-weight: 500;
+  color: var(--contrast-overlay);
+  text-decoration: none;
+  transition: var(--animation);
+}
+
+.socials a:hover {
+  color: var(--contrast-base);
 }

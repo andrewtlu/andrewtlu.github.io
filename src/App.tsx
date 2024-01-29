@@ -1,29 +1,49 @@
 import { Socials } from './components/svgs.tsx'
 import './App.css'
 import { ContactPane, ExperiencePane, ProjectPane, InfoPane } from './components/panes.tsx'
+import { useEffect } from 'react'
 
 function App() {
+  // const observer = new IntersectionObserver(entries => {
+  //   entries.forEach(entry => {
+  //     entry.
+  //   })
+  // });
+
   return (
     <div className='content'>
       <header>
         {/* sticky, do gradient stroke w/ non sticky background element? or numbers idk */}
         <div className='header-text'>
           {/* TODO: link to own website */}
-          <h1>Hey! I'm Andrew.</h1>
-          <h2>CS Undergrad @ Emory</h2>
-          <p className='body'>Currently combatting procrastination and imposter syndrome :P</p>
+          <div>
+            <h1>Hey! I'm Andrew.</h1>
+            <h2>CS Undergrad @ Emory</h2>
+            <p className='body'>Currently combatting procrastination and imposter syndrome :P</p>
+          </div>
           <nav>
             <ul className='small'>
               {/* TODO: animations */}
-              <li>
-                About
+              <li className='about' id='active'>
+                <a href="#about">
+                  About
+                </a>
               </li>
-              <li>
-                Experience
+              <li className='experience'>
+                <a href="#experience">
+                  Experience
+                </a>
               </li>
-              <li>Involvement</li>
-              <li>Projects</li>
-              <li>Contact</li>
+              <li className='involvement'>
+                <a href="#involvement">
+                  Involvement
+                </a>
+              </li>
+              <li className='projects'>
+                <a href="#projects">
+                  Projects
+                </a>
+              </li>
             </ul>
           </nav>
         </div>

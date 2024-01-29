@@ -13,19 +13,19 @@ button {
 
   background-color: var(--crust);
   color: var(--contrast-crust) !important;
-  border: var(--thickness) solid var(--accent-1);
+  border: var(--thickness) solid var(--accent);
   border-radius: 50px;
 
   transition: var(--animation);
 }
 
 .skillbutton:hover {
-  background-color: var(--accent-1) !important;
+  background-color: var(--accent) !important;
   color: var(--base) !important;
 }
 
 #selected {
-  background-color: var(--accent-1);
+  background-color: var(--accent);
   color: var(--base) !important;
 }
 
@@ -36,8 +36,8 @@ button {
 
   font-weight: 500;
 
-  background-color: var(--accent-1) !important;
+  background-color: var(--accent) !important;
   color: var(--base) !important;
-  border: var(--thickness) solid var(--accent-1);
+  border: var(--thickness) solid var(--accent);
   border-radius: 50px;
 }
