@@ -107,10 +107,14 @@ footer {
 }
 
 #involvement {
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
 /* project styles */
+
+#projects {
+  padding-top: 1rem;
+}
 
 section .projects {
   display: flex;

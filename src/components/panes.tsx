@@ -66,7 +66,7 @@ export function ExperiencePane(props: ExperiencePaneProps) {
           {
             props.skills.map(skill => {
               return (
-                <SkillButton skill={skill} />
+                <SkillButton key={skill} skill={skill} />
               )
             })
           }
@@ -103,7 +103,7 @@ export function ProjectPane(props: ProjectPaneProps) {
         <div className='skills'>
           {props.skills.map(skill => {
             return (
-              <SkillButton skill={skill} />
+              <SkillButton key={skill} skill={skill} />
             );
           })}
         </div>

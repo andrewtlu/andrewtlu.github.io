@@ -1,35 +1,44 @@
 import { Socials } from './components/svgs.tsx'
 import './App.css'
 import { ContactPane, ExperiencePane, ProjectPane, InfoPane } from './components/panes.tsx'
+import { useEffect } from 'react';
 
-function App() {
-  const navElements = [
-    document.querySelector('ul.small .about'),
-    document.querySelector('ul.small .experience'),
-    document.querySelector('ul.small .involvement'),
-    document.querySelector('ul.small .projects'),
-    document.querySelector('ul.small .contact'),
-  ]
-
-  // const observer = new IntersectionObserver(entries => {
-  //   entries.forEach(entry => {
-  //     entry.
-  //   })
-  // });
-
-  // update navbar clicks
-  navElements.forEach(element => {
-    if (element instanceof Element) {
-      element.addEventListener('click', () => {
-        // clear active id (make sure not to delete semicolon cuz magic?)
-        navElements.forEach(unselect => {
-          if (unselect instanceof Element) unselect.id = '';
-        });
-        element.id = 'active';
-      })
+// clear active id
+function unselectElements(elements: (Element | null)[]) {
+  elements.forEach(unselect => {
+    if (unselect instanceof Element) {
+      unselect.id = '';
     }
   });
+}
 
+function App() {
+  useEffect(() => {
+    const navElements = [
+      document.querySelector('ul.small .about'),
+      document.querySelector('ul.small .experience'),
+      document.querySelector('ul.small .involvement'),
+      document.querySelector('ul.small .projects'),
+      document.querySelector('ul.small .contact'),
+    ];
+    
+    // update navbar clicks
+    navElements.forEach(element => {
+      if (element instanceof Element) {
+        element.addEventListener('click', () => {
+          unselectElements(navElements);
+          element.id = 'active';
+        })
+      }
+    });
+  }, []);
+  
+    // const observer = new IntersectionObserver(entries => {
+    //   entries.forEach(entry => {
+        
+    //   })
+    // });
+  
   return (
     <div className='content'>
       <header>
