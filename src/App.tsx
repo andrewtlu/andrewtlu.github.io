@@ -1,14 +1,34 @@
 import { Socials } from './components/svgs.tsx'
 import './App.css'
 import { ContactPane, ExperiencePane, ProjectPane, InfoPane } from './components/panes.tsx'
-import { useEffect } from 'react'
 
 function App() {
+  const navElements = [
+    document.querySelector('ul.small .about'),
+    document.querySelector('ul.small .experience'),
+    document.querySelector('ul.small .involvement'),
+    document.querySelector('ul.small .projects'),
+    document.querySelector('ul.small .contact'),
+  ]
+
   // const observer = new IntersectionObserver(entries => {
   //   entries.forEach(entry => {
   //     entry.
   //   })
   // });
+
+  // update navbar clicks
+  navElements.forEach(element => {
+    if (element instanceof Element) {
+      element.addEventListener('click', () => {
+        // clear active id (make sure not to delete semicolon cuz magic?)
+        navElements.forEach(unselect => {
+          if (unselect instanceof Element) unselect.id = '';
+        });
+        element.id = 'active';
+      })
+    }
+  });
 
   return (
     <div className='content'>
@@ -23,25 +43,34 @@ function App() {
           </div>
           <nav>
             <ul className='small'>
-              {/* TODO: animations */}
               <li className='about' id='active'>
                 <a href="#about">
+                  <span className='selection'></span>
                   About
                 </a>
               </li>
               <li className='experience'>
                 <a href="#experience">
+                  <span className='selection'></span>
                   Experience
                 </a>
               </li>
               <li className='involvement'>
                 <a href="#involvement">
+                  <span className='selection'></span>
                   Involvement
                 </a>
               </li>
               <li className='projects'>
                 <a href="#projects">
+                  <span className='selection'></span>
                   Projects
+                </a>
+              </li>
+              <li className='contact'>
+                <a href="#contact">
+                  <span className='selection'></span>
+                  Contact
                 </a>
               </li>
             </ul>
