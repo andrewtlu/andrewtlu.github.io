@@ -1,0 +1,56 @@
+/* timeline styles */
+
+.line {
+  position: relative;
+}
+
+.line::before {
+  content: '';
+  position: absolute;
+  
+  left: -20px;
+  width: 4.25rem;
+  height: 100%;
+
+  z-index: -1;
+
+  border-right: var(--thickness) solid var(--accent);
+}
+
+.startline::before {
+  content: '';
+  position: absolute;
+
+  margin: -1rem 0 0 -1.25rem;
+  width: 4.25rem;
+  height: 2rem;
+
+  z-index: -1;
+
+  border-color: var(--accent);
+  border-top-style: solid;
+  border-right-style: solid;
+  border-radius: 0 20px 0 0;
+  border-width: var(--thickness);
+}
+
+.endline {
+  margin-bottom: 3rem;
+}
+
+.endline::after {
+  content: '';
+  position: absolute;
+
+  margin: 0 0 0 -1.25rem; /* see #section for y offset (section margin) */
+  width: 4.25rem;
+  height: 2rem;
+
+  z-index: -1;
+
+  border-color: var(--accent);
+  border-bottom-style: solid;
+  border-right-style: solid;
+  border-radius: 0 0 20px 0;
+  border-width: var(--thickness);
+}

@@ -1,0 +1,55 @@
+/* section-specific styles */
+
+.narrowcontent {
+  width: var(--content-width);
+}
+
+.narrowcontent>div:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+.narrowcontent:hover, .projects:hover {
+  opacity: 0.6;
+}
+
+
+/* about styles */
+#about {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+#about .body:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+
+/* experience & involvement styles */
+#experience, #involvement {
+  padding-top: 1rem;
+}
+
+#involvement {
+  padding-bottom: 2rem;
+}
+
+/* project styles */
+#projects {
+  padding-top: 1rem;
+}
+
+section .projects {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  box-shadow: 0.5rem 0.5rem 0 var(--accent)/*, 1rem 1rem 0 var(--crust)*/;
+  padding: 10px;
+  margin-bottom: 3rem;
+  
+  background-color: var(--crust);
+
+  border: var(--thickness) solid var(--accent);
+  border-radius: 5px;
+  width: 100%;
+}

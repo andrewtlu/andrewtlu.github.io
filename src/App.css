@@ -1,7 +1,7 @@
-@import url(./styles/header.css);
-@import url(./styles/main.css);
+@import url(./styles/header/header.css);
+@import url(./styles/main/main.css);
 
-/* "collects" and links other stylesheets */
+/* links main stylesheets */
 
 .content {
   display: flex;

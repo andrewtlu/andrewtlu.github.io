@@ -1,0 +1,7 @@
+/* footer specific styles */
+
+footer {
+  margin-top: 4rem;
+  align-self: center;
+  width: var(--content-width);
+}

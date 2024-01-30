@@ -1,3 +1,5 @@
+@import '../styles/components/pane.css';
+
 .paneheader {
   display: flex;
   align-items: center;

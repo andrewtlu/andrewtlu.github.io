@@ -1,0 +1,12 @@
+/* socials specific styles */
+
+.socials a {
+  font-weight: 500;
+  color: var(--contrast-overlay);
+  text-decoration: none;
+  transition: var(--animation);
+}
+
+.socials a:hover {
+  color: var(--contrast-base);
+}

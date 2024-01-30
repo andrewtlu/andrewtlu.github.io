@@ -1,0 +1,23 @@
+@import './line.css';
+@import './sections.css';
+@import './footer.css';
+
+/* main content styles */
+
+main {
+  margin: 0 1rem 5rem 1rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section:not(:last-of-type) {
+  padding-bottom: 1rem;
+}
