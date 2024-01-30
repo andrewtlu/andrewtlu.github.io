@@ -1,16 +1,18 @@
-import { useState } from 'react';
 import './buttons.css'
+import '../store/selected'
+import { SelectedContext, isSelected, toggleSkill } from '../store/selected';
+import { useContext } from 'react';
 
 // TODO: inherit accent color
 export function SkillButton(props: {skill: string}) {
-  const [selected, setSelected] = useState(false);
+  const [selected, setSelected] = useContext(SelectedContext);
 
   return (
     <button
       className='skillbutton body'
-      id={selected ? 'selected' : 'unselected'}
+      id={isSelected(selected, props.skill) ? 'selected' : 'unselected'}
       onClick={() => {
-        setSelected((selected) => !selected);
+        toggleSkill(selected, setSelected, props.skill);
     }}>
       {props.skill}
     </button>
