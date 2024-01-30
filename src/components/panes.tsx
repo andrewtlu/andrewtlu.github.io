@@ -90,12 +90,12 @@ export function InfoPane(props: InfoPaneProps) {
   return (
     <div
       className={
-        'infopane paneheader' +
+        'infopane' +
         (props.border || selected.length == 0 ? ' selected' : ' unselected')
       }
       id={props.border ? 'border' : 'borderless'}
     >
-      <div className='content'>
+      <div className='panebody'>
           <ResumeNoA />
           <h2 className='role'>{props.text}</h2>
       </div>
@@ -115,8 +115,8 @@ export function ProjectPane(props: ProjectPaneProps) {
       }
     >
       <img src={props.img} alt={props.name + ' image'} />
-      <div className='projectbody'>
-        <div className='projectheader'>
+      <div className='panebody'>
+        <div className='title'>
           <p className='body'>{props.name}</p>
           <RedirectArrow />
         </div>

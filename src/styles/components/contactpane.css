@@ -1,0 +1,36 @@
+/* contact pane styles */
+
+.contactpane .paneheader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 6px;
+
+  cursor: default;
+
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  border: var(--thickness) solid var(--accent); /* TODO w/ button: relative to container body */
+  background: var(--crust);
+}
+
+.contactpane .panebody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  transition: var(--animation);
+
+  width: 100%;
+  height: auto;
+  padding: 12px 20px 12px 20px;
+  background: var(--mantle);
+  border-radius: 0 0 5px 5px;
+  border: solid var(--accent); /* TODO w/ button: relative to container body */
+  border-width: 0 var(--thickness) var(--thickness) var(--thickness);
+}
+
+.contactpane .chat {
+  color: var(--contrast-overlay);
+}

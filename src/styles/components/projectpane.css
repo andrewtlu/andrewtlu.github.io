@@ -1,0 +1,52 @@
+.projectpane {
+  width: 100%;
+  padding: 10px;
+
+  opacity: 1;
+  transition: var(--animation);
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background-color: var(--mantle);
+  border-radius: 5px;
+}
+
+.projectpane:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.projectpane .panebody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+img {
+  max-width: 40%;
+  aspect-ratio: 16/9;
+  
+  object-fit: cover;
+  object-position: top;
+  border-radius: 5px;
+  border: var(--thickness) solid var(--crust)
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.title .body, .title .redirect {
+  color: var(--contrast-crust);
+  font-weight: 600 !important;
+}
+
+/* selecting/deselecting */
+.projectpane.unselected {
+  opacity: var(--unselected-opacity);
+}
+
+.projectpane:hover {
+  opacity: 1 !important;
+}

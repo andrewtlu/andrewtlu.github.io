@@ -28,8 +28,6 @@
   --content-width: 90%;
   --unselected-opacity: 0.4;
   --max-height: 6.5rem; /* janky height transition solution in panes.css/tsx */
-  --pane-gap: 10px;
-  --pane-vert-padding: calc(var(--pane-gap) / 2);
 
   --animation: all 0.1s ease-out;
 
