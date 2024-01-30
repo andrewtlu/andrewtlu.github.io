@@ -1,8 +1,9 @@
-import { useState } from 'react';
-import { HiButton, SkillButton } from './buttons.tsx';
+import { useContext, useState } from 'react';
 import './panes.css'
 import './svgs.tsx'
+import { HiButton, SkillButton } from './buttons.tsx';
 import { Chat, DropdownArrow, RedirectArrow, ResumeNoA } from './svgs.tsx';
+import { SelectedContext, hasSelected } from '../store/selected.tsx';
 
 // used really janky height solution for animation, if problems with rendering check max-height property of .panebody>.small
 
@@ -35,9 +36,16 @@ interface ProjectPaneProps {
 
 export function ExperiencePane(props: ExperiencePaneProps) {
   const [closed, setClosed] = useState(false);
+  const selected = useContext(SelectedContext)[0];
 
   return (
-    <div className='experiencepane' id={closed ? 'closed' : 'opened'}>
+    <div
+      className={
+        'experiencepane ' + 
+        (hasSelected(selected, props.skills) ? 'selected ' : 'unselected ') +
+        (closed ? 'closed' : 'opened')
+      }
+    >
       <div
         className='paneheader'
         onClick={() => setClosed((closed) => !closed)}

@@ -56,7 +56,7 @@
 .panebody>.small {
   transition: all 0.15s linear; /* not using --animation variable because max-height fix messes with timings */
   overflow-y: hidden;
-  max-height: 6.5rem; /* here is the janky fix I was talking about */
+  max-height: var(--max-height); /* here is the janky fix I was talking about */
 }
 
 .skills {
@@ -66,19 +66,16 @@
   gap: 8px;
 }
 
-#closed>.panebody {
+/* selecting/deselecting */
+.unselected>.panebody, .closed>.panebody {
   gap: 5px;
 }
 
-#closed>.panebody>.small/*, #closed .skills */{
-  /* transform: scaleY(0);
-  transform-origin: top; */
-  /* display: none; */
-
+.unselected>.panebody>.small, .closed>.panebody>.small {
   max-height: 0;
 }
 
-#closed .arrow {
+.unselected .arrow, .closed .arrow {
   transform: rotate(0deg);
 }
 
