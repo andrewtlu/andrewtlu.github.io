@@ -24,6 +24,7 @@
   --radius: 5px;
   --thickness: 2px;
   --content-width: 90%;
+  --unselected-opacity: 0.4;
   --max-height: 6.5rem; /* janky height transition solution in panes.css/tsx */
 
   --animation: all 0.1s ease-out;

@@ -85,8 +85,16 @@ export function ExperiencePane(props: ExperiencePaneProps) {
 }
 
 export function InfoPane(props: InfoPaneProps) {
+  const [selected, _] = useContext(SelectedContext);
+
   return (
-    <div className='infopane paneheader' id={props.border ? 'border' : 'borderless'}>
+    <div
+      className={
+        'infopane paneheader' +
+        (props.border || selected.length == 0 ? ' selected' : ' unselected')
+      }
+      id={props.border ? 'border' : 'borderless'}
+    >
       <div className='content'>
           <ResumeNoA />
           <h2 className='role'>{props.text}</h2>
@@ -97,8 +105,15 @@ export function InfoPane(props: InfoPaneProps) {
 }
 
 export function ProjectPane(props: ProjectPaneProps) {
+  const [selected, _] = useContext(SelectedContext);
+
   return (
-    <div className='projectpane'>
+    <div
+      className={
+        'projectpane ' + 
+        (hasSelected(selected, props.skills) ? 'selected' : 'unselected')
+      }
+    >
       <img src={props.img} alt={props.name + ' image'} />
       <div className='projectbody'>
         <div className='projectheader'>
