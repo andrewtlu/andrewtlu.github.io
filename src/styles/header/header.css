@@ -10,6 +10,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 2rem;
 
   width: 40%;
   height: 100vh;
@@ -33,7 +34,12 @@ header h2 {
 
 header .body {
   color: var(--contrast-crust);
-  margin-bottom: 6rem;
+}
+
+.headertop {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 

@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { ContactPane, ExperiencePane, ProjectPane, InfoPane } from '../components/panes.tsx'
 import { Socials } from '../components/svgs.tsx'
 import { useEffect } from 'react';
+import { ResetSkills } from '../components/buttons.tsx';
+import Resume from '../assets/Resume Current.pdf';
 
 function debounce(func: Function, delay: number) {
   let timeout: number;
@@ -71,8 +73,7 @@ function Home() {
     <div className='content'>
       <header>
         {/* sticky, do gradient stroke w/ non sticky background element? or numbers idk */}
-        <div className='header-text'>
-          {/* TODO: link to own website */}
+        <div className='headertop'>
           <div>
             <h1>
               <Link to="./">
@@ -116,6 +117,7 @@ function Home() {
               </li>
             </ul>
           </nav>
+          <ResetSkills />
         </div>
         <Socials />
       </header>
@@ -174,7 +176,9 @@ function Home() {
               skills={['Spring Boot', 'React', 'SCSS', 'Git', 'Flask', 'Figma', 'Canva']}
             />
 
-            <InfoPane text='View full resume' border={true} url='' />
+            <a href={Resume} target="_blank" rel="noopener noreferrer">
+              <InfoPane text='View full resume' border={true} url='' />
+            </a>
           </div>
         </section>
 
@@ -196,7 +200,7 @@ function Home() {
               skills={['React', 'TypeScript', 'Figma']}
             />
 
-            <InfoPane text='View my other projects' border={false} url='' />
+            {/* <InfoPane text='View my other projects' border={false} url='' /> */}
           </div>
         </section>
 

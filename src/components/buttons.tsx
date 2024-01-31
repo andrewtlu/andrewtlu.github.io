@@ -3,7 +3,6 @@ import '../store/selected'
 import { SelectedContext, isSelected, toggleSkill } from '../store/selected';
 import { useContext } from 'react';
 
-// TODO: inherit accent color
 export function SkillButton(props: {skill: string}) {
   const [selected, setSelected] = useContext(SelectedContext);
 
@@ -26,5 +25,18 @@ export function HiButton() {
         Say hi!
       </button>
     </a>
+  )
+}
+
+export function ResetSkills() {
+  const setSelected = useContext(SelectedContext)[1];
+
+  return (
+    <button
+      className='skillbutton resetskillsbutton body'
+      onClick={() => {setSelected((selected) => selected = [])}}
+    >
+      Reset Filters
+    </button>
   )
 }

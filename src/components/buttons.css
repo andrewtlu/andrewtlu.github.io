@@ -49,3 +49,15 @@ button {
   border: var(--thickness) solid var(--accent);
   border-radius: 50px;
 }
+
+.resetskillsbutton {
+  display: flex;
+  justify-content: center;
+}
+
+.resetskillsbutton.body {
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  color: var(--contrast-mantle) !important;
+}
