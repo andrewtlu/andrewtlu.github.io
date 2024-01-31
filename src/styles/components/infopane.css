@@ -13,7 +13,6 @@
   cursor: pointer;
   opacity: 1;
   transition: var(--animation);
-  color: var(--contrast-overlay);
   
   width: 100%;
   border-radius: var(--radius);
@@ -22,13 +21,14 @@
 }
 
 .infopane h2 {
-  color: var(--contrast-crust)
+  color: var(--contrast-crust);
+  white-space: nowrap;
 }
 
 .infopane .panebody {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   gap: 6px;
 }
 

@@ -32,7 +32,6 @@
 }
 
 .arrow {
-  color: var(--contrast-overlay);
   transition: var(--animation);
   transform: rotate(90deg);
 }

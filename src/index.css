@@ -57,6 +57,17 @@ a {
 }
 
 
+/* svg styles */
+
+svg {
+  width: 25px;
+}
+
+.arrow, .redirect, .chat, .projectsvg, .resumenoanchorsvg {
+  color: var(--contrast-overlay);
+}
+
+
 /* general layout */
 
 body {

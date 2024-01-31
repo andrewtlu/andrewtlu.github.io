@@ -108,30 +108,32 @@ export function ProjectPane(props: ProjectPaneProps) {
   const [selected, _] = useContext(SelectedContext);
 
   return (
-    <div
-      className={
-        'projectpane ' + 
-        (hasSelected(selected, props.skills) ? 'selected' : 'unselected')
-      }
-    >
-      <img src={props.img} alt={props.name + ' image'} />
-      <div className='panebody'>
-        <div className='title'>
-          <p className='body'>{props.name}</p>
-          <RedirectArrow />
-        </div>
-        <div className='small'>
-          {props.desc}
-        </div>
-        <div className='skills'>
-          {props.skills.map(skill => {
-            return (
-              <SkillButton key={skill} skill={skill} />
-            );
-          })}
+    <a href={props.url} target="_blank" rel="noopener noreferrer">
+      <div
+        className={
+          'projectpane ' + 
+          (hasSelected(selected, props.skills) ? 'selected' : 'unselected')
+        }
+      >
+        <img src={props.img} alt={props.name + ' image'} />
+        <div className='panebody'>
+          <div className='title'>
+            <p className='body'>{props.name}</p>
+            <RedirectArrow />
+          </div>
+          <div className='small'>
+            {props.desc}
+          </div>
+          <div className='skills'>
+            {props.skills.map(skill => {
+              return (
+                <SkillButton key={skill} skill={skill} />
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </a>
   )
 }
 

@@ -2,11 +2,11 @@
 
 .socials a {
   font-weight: 500;
-  color: var(--contrast-overlay);
+  color: var(--contrast-overlay) !important;
   text-decoration: none;
   transition: var(--animation);
 }
 
 .socials a:hover {
-  color: var(--contrast-base);
+  color: var(--contrast-base) !important;
 }

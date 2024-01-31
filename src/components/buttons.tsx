@@ -10,7 +10,8 @@ export function SkillButton(props: {skill: string}) {
     <button
       className='skillbutton body'
       id={isSelected(selected, props.skill) ? 'selected' : 'unselected'}
-      onClick={() => {
+      onClick={(button) => {
+        button.preventDefault();
         toggleSkill(selected, setSelected, props.skill);
     }}>
       {props.skill}
