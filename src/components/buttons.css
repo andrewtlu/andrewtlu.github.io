@@ -1,7 +1,17 @@
 /* we love the !important tag */
 
+button:hover {
+  top: -2px;
+  left: -2px;
+  box-shadow: 2px 2px 0 var(--accent);
+}
+
 button {
   cursor: pointer;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: var(--animation);
 }
 
 .skillbutton {
@@ -15,14 +25,12 @@ button {
   color: var(--contrast-crust) !important;
   border: var(--thickness) solid var(--accent);
   border-radius: 50px;
-
-  transition: var(--animation);
 }
 
-.skillbutton:hover {
+/* .skillbutton:hover {
   background-color: var(--accent) !important;
   color: var(--base) !important;
-}
+} */
 
 #selected {
   background-color: var(--accent);

@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import './panes.css'
 import './svgs.tsx'
 import { HiButton, SkillButton } from './buttons.tsx';
-import { Chat, DropdownArrow, RedirectArrow, ResumeNoA } from './svgs.tsx';
+import { Chat, DropdownArrow, Project, RedirectArrow, ResumeNoA } from './svgs.tsx';
 import { SelectedContext, hasSelected } from '../store/selected.tsx';
 
 // used really janky height solution for animation, if problems with rendering check max-height property of .panebody>.small
@@ -96,7 +96,7 @@ export function InfoPane(props: InfoPaneProps) {
       id={props.border ? 'border' : 'borderless'}
     >
       <div className='panebody'>
-          <ResumeNoA />
+          {props.border ? <ResumeNoA /> : <Project />}
           <h2 className='role'>{props.text}</h2>
       </div>
       <RedirectArrow />

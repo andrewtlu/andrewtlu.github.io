@@ -1,5 +1,13 @@
 /* contact pane styles */
 
+.contactpane {
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: var(--animation);
+  border-radius: 5px;
+}
+
 .contactpane .paneheader {
   display: flex;
   align-items: center;

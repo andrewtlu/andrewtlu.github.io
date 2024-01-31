@@ -35,17 +35,26 @@
 }
 
 section .projects {
+  position: relative;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
 
-  box-shadow: 0.5rem 0.5rem 0 var(--accent)/*, 1rem 1rem 0 var(--crust)*/;
   padding: 10px;
   margin-bottom: 3rem;
+  transition: var(--animation);
   
   background-color: var(--crust);
 
   border: var(--thickness) solid var(--accent);
   border-radius: 5px;
   width: 100%;
+}
+
+section .projects:hover {
+  top: -5px;
+  left: -5px;
+  box-shadow: 5px 5px 0 var(--accent);
 }

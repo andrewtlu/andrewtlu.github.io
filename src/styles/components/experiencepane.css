@@ -1,5 +1,13 @@
 /* experience pane styles */
 
+.experiencepane {
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: var(--animation);
+  border-radius: 5px;
+}
+
 .experiencepane .paneheader {
   display: flex;
   align-items: center;
@@ -14,11 +22,25 @@
   background: var(--crust);
 }
 
-.experiencepane .paneheader .arrow {
+/* selecting/deselecting */
+.experiencepane.unselected>.panebody, .experiencepane.closed>.panebody {
+  gap: 5px;
+}
+
+.experiencepane.unselected>.panebody>.small, .experiencepane.closed>.panebody>.small {
+  max-height: 0;
+}
+
+.arrow {
+  color: var(--contrast-overlay);
   transition: var(--animation);
   transform: rotate(90deg);
-  color: var(--contrast-overlay);
 }
+
+.unselected .arrow, .closed .arrow {
+  transform: rotate(0deg);
+}
+/* end selecting/deselecting */
 
 .experiencepane .paneheader .role {
   color: var(--contrast-crust);
