@@ -48,7 +48,7 @@ export function ExperiencePane(props: ExperiencePaneProps) {
     >
       <div
         className='paneheader'
-        onClick={() => setClosed((closed) => !closed)}
+        onClick={() => {if (hasSelected(selected, props.skills)) setClosed((closed) => !closed)}}
       >
         <DropdownArrow />
         <span className='role body'>

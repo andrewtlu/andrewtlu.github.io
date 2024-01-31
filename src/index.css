@@ -29,7 +29,7 @@
   --unselected-opacity: 0.4;
   --max-height: 6.5rem; /* janky height transition solution in panes.css/tsx */
 
-  --animation: all 0.1s ease-out;
+  --animation: all 0.05s ease-out;
 
   background-color: var(--base);
   color: var(--contrast-base);
