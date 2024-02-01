@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Personal Website",
+    "url": "https://github.com/andrewtlu/andrewtlu.github.io",
+    "desc": "The personal portfolio website you are currently reading! I built this in order to teach myself frontend software and design skills to better support my project team in Project Emory.",
+    "img": "src/assets/img/website.png",
+    "skills": ["React", "TypeScript", "Vite", "Figma"]
+  },
+  {
+    "name": "RIDEmory",
+    "url": "https://github.com/PROJECT-Emory-2023/RIDEmory",
+    "desc": "A full-stack self-updating database of ride information for Emory students accessible either via the web or through GroupMe. Currently a work in progress, make sure to watch the repository in order to stay up to date with our progress!",
+    "img": "src/assets/img/ridemory.png",
+    "skills": ["Java", "Maven", "Spring Boot", "React", "Python", "Flask", "SpaCy", "Figma", "Git"]
+  },
+  {
+    "name": "Memly",
+    "url": "https://github.com/memly-ai/memly",
+    "desc": "A 48-hour minimum viable product built for HackATL. Proof of concept for a general purpose spaced-repetition progress tracker app.",
+    "img": "src/assets/img/memly.png",
+    "skills": ["Svelte", "TypeScript", "Tailwind CSS", "Figma"]
+  },
+  {
+    "name": "Voice Calculator",
+    "url": "https://github.com/andrewtlu/VoiceCalculator/",
+    "desc": "A hands-free 15-function calculator written using Sphinx4 and MaryTTS. Comes with custom configuration settings and built-in grammar regex in order to increase speech detection accuracy.",
+    "img": "src/assets/img/voicecalculator.png",
+    "skills": ["Java", "Sphinx4", "MaryTTS"]
+  }
+]

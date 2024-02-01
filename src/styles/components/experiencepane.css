@@ -6,9 +6,15 @@
   left: 0;
   transition: var(--animation);
   border-radius: var(--radius);
+  cursor: default;
 }
 
 .experiencepane .paneheader {
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: var(--animation);
+
   display: flex;
   align-items: center;
   gap: 4px;
@@ -18,8 +24,14 @@
 
   width: 100%;
   border-radius: var(--radius) var(--radius) 0 0;
-  border: var(--thickness) solid var(--accent); /* TODO w/ button: relative to container body */
+  border: var(--thickness) solid var(--accent);
   background: var(--crust);
+}
+
+.experiencepane:not(.unselected) .paneheader:hover {
+  top: -2px;
+  left: -2px;
+  box-shadow: 2px 2px 0 var(--accent);
 }
 
 /* selecting/deselecting */
@@ -47,7 +59,7 @@
 
 .experiencepane .paneheader .role {
   color: var(--contrast-crust);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .experiencepane .panebody {
@@ -78,6 +90,25 @@
 .experiencepane .employer {
   color: var(--contrast-crust);
   font-weight: 600 !important;
+}
+
+.experiencepane .employer:hover {
+  color: var(--accent);
+  font-weight: 600 !important;
+}
+
+.employer .redirect {
+  position: relative;
+  top: 0;
+  left: -8px;
+  transition: var(--animation);
+  width: 20px;
+}
+
+.employer:hover .redirect {
+  color: var(--accent);
+  top: -3px;
+  left: -5px;
 }
 
 .experiencepane .panebody>.small {

@@ -10,6 +10,7 @@ import { SelectedContext, hasSelected } from '../store/selected.tsx';
 interface ExperiencePaneProps {
   pos: string;
   group: string;
+  groupurl: string;
   date: string // Date;
   desc: string;
   skills: string[];
@@ -58,9 +59,10 @@ export function ExperiencePane(props: ExperiencePaneProps) {
 
       <div className='panebody'>
         <div className='subheader'>
-          <span className='small employer'>
+          <a href={props.groupurl} target="_blank" rel="noopener noreferrer" className='small employer'>
             {props.group}
-          </span>
+            <RedirectArrow />
+            </a>
           <span className='small'>
             {props.date /*formatDate(props.date)*/}
           </span>
@@ -108,13 +110,13 @@ export function ProjectPane(props: ProjectPaneProps) {
   const [selected, _] = useContext(SelectedContext);
 
   return (
-    <a href={props.url} target="_blank" rel="noopener noreferrer">
-      <div
-        className={
-          'projectpane ' + 
-          (hasSelected(selected, props.skills) ? 'selected' : 'unselected')
-        }
-      >
+    <div
+      className={
+        'projectpane ' + 
+        (hasSelected(selected, props.skills) ? 'selected' : 'unselected')
+      }
+    >
+        <a href={props.url} target="_blank" rel="noopener noreferrer">
         <img src={props.img} alt={props.name + ' image'} />
         <div className='panebody'>
           <div className='title'>
@@ -132,8 +134,8 @@ export function ProjectPane(props: ProjectPaneProps) {
             })}
           </div>
         </div>
-      </div>
-    </a>
+      </a>
+    </div>
   )
 }
 
@@ -145,7 +147,7 @@ export function ContactPane() {
         <h2 className='role'>Want to chat? Let's talk!</h2>
       </div>
       <div className='panebody body'>
-        Whether you want to talk about my projects, backpacking gear, or even Minecraft, my inbox is open!
+        Whether you want to talk about my projects (or have a cool project idea in mind), backpacking gear, or even Minecraft, my inbox is open!
         <HiButton />
       </div>
     </div>

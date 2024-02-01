@@ -92,7 +92,7 @@ body {
     --contrast-crust: #232634;
     --contrast-overlay: #737994;
 
-    --accent: var(--accent-1);
+    --accent: var(--accent-2);
     --accent-1: #dd7878;
     --accent-2: #7287fd;
   }

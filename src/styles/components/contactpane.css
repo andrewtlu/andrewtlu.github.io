@@ -6,6 +6,7 @@
   left: 0;
   transition: var(--animation);
   border-radius: var(--radius);
+  cursor: default;
 }
 
 .contactpane .paneheader {
@@ -18,12 +19,16 @@
 
   width: 100%;
   border-radius: var(--radius) var(--radius) 0 0;
-  border: var(--thickness) solid var(--accent); /* TODO w/ button: relative to container body */
+  border: var(--thickness) solid var(--accent);
   background: var(--crust);
 }
 
 .contactpane h2 {
   color: var(--contrast-crust);
+}
+
+.contactpane .body {
+  line-height: 1.3rem;
 }
 
 .contactpane .panebody {
@@ -39,7 +44,7 @@
   padding: 12px 20px 12px 20px;
   background: var(--mantle);
   border-radius: 0 0 var(--radius) var(--radius);
-  border: solid var(--accent); /* TODO w/ button: relative to container body */
+  border: solid var(--accent);
   border-width: 0 var(--thickness) var(--thickness) var(--thickness);
 }
 

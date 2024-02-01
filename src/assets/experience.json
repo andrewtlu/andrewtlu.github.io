@@ -1,0 +1,46 @@
+[
+  [
+    {
+      "pos": "Technology Consultant",
+      "group": "Emory University Student Digital Life",
+      "groupurl": "https://ats.emory.edu/sdl/",
+      "date": "Aug 2023 - Present",
+      "desc": "Manage Cox Computing Center's collaboration space and help students with technical assistance for personal computers, computer workstations, screencast equipment, and various consoles. Maintain campus-wide printer and computer network.",
+      "skills": []
+    },
+    {
+      "pos": "Software Engineer",
+      "group":  "Kerygma Digital",
+      "groupurl": "https://kerygma.digital/",
+      "date": "Jun 2023 - Jul 2023",
+      "desc": "Developed and improved BibleBot's easy quick reference features for 4m+ users across 51,000+ Discord servers. Reduced service response latency by 60% (~400 ms) by implementing a custom configurable time-to-live HTTP cache.",
+      "skills": ["C#", "ASP.NET", "MongoDB Atlas", "Git"]
+    }
+  ],
+  [
+    {
+      "pos": "Head Project Lead",
+      "group": "Project Emory",
+      "groupurl": "https://github.com/PROJECT-Emory-2023",
+      "date": "Aug 2023 - Present",
+      "desc": "Lead development of RIDEmory's backend services in order to provide easy access to automatically compiled rideshare information across Emory's campus. Teach project engineers technology such as MVC frameworks, advanced Java features, version control, and React through presentations and practice.",
+      "skills": ["Java", "Spring Boot", "MongoDB Atlas", "React", "JavaScript", "Flask", "Git"]
+    },
+    {
+      "pos": "Software Engineer",
+      "group": "Emory Hack4Impact",
+      "groupurl": "https://emory-hack4impact.github.io/",
+      "date": "Dec 2023 - Present",
+      "desc": "Build an automated survey service for Odyssey Family Consulting Center, connecting their CoreLogic database with their website in order to eliminate the need for manually entering and looking up user experience survey data. Currently a work in progress!",
+      "skills": ["JavaScript", "Git"]
+    },
+    {
+      "pos": "Equipment Manager & Head Backpacking Trip Leader",
+      "group": "Outdoor Emory",
+      "groupurl": "https://emory.campuslabs.com/engage/organization/outdoor-emory",
+      "date": "Feb 2023 - Feb 2024",
+      "desc": "Organized, serviced, and inventoried equipment for Outdoor Emory trips and Emory RecWell rentals in order to provide 1000+ students with safe and affordable access to the outdoors. Cleaned unusable space in Emory's gym to move $15,000+ of equipment and prevent climate-related gear degredation.",
+      "skills": []
+    }
+  ]
+]

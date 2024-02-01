@@ -5,3 +5,17 @@ footer {
   align-self: center;
   width: var(--content-width);
 }
+
+footer.small a {
+  display: inline;
+  height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+footer.small a:hover {
+  color: var(--accent);
+  filter: brightness(120%)
+}

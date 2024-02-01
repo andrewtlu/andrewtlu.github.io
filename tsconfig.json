@@ -17,7 +17,7 @@
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    // "noUnusedParameters": true, // problem with buttons.tsx onclick for reset filters button
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src"],

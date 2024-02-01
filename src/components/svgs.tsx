@@ -45,7 +45,6 @@ export function Email() {
 
 export function Resume() {
   return (
-    // TODO: add link to PDF resource
     <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_261_657)">

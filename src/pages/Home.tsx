@@ -3,7 +3,8 @@ import { ContactPane, ExperiencePane, ProjectPane, InfoPane } from '../component
 import { Socials } from '../components/svgs.tsx'
 import { useEffect } from 'react';
 import { ResetSkills } from '../components/buttons.tsx';
-import Resume from '../assets/Resume Current.pdf';
+import experience from '../assets/experience.json';
+import projects from '../assets/projects.json';
 
 function debounce(func: Function, delay: number) {
   let timeout: number;
@@ -45,7 +46,6 @@ function Home() {
     const sections = document.querySelectorAll('section');
 
     updateNavClicks(navElements);
-    // updateIntersection(); // TODO: color changing
     
     const scrollHandler = () => {
       for (let i = 0; i < sections.length; i++) {
@@ -68,6 +68,8 @@ function Home() {
 
     document.addEventListener('scroll', debounce(scrollHandler, 250))
   }, []);
+
+  var count = 0;
 
   return (
     <div className='content'>
@@ -124,59 +126,57 @@ function Home() {
       <main>
         <section id='about'>
           <p className='body'>
-            I'm a second year student studying CS at Emory University with a passion for backend dev. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec augue id nibh aliquam vulputate. Aenean sem tortor, vulputate vel laoreet ac, malesuada eget ante. Vivamus aliquet vulputate malesuada.
+            When my mom found out my “self-directed interest” in Computer Science was just a ploy for more video game time, she enrolled me in an introductory Java course to discourage any further deception from me. Little did she know, that Java course's final project began the process of replacing <a href="https://borg286.github.io/sevtech/" target="_blank" rel="noopener noreferrer">questing</a> and <a href="https://www.youtube.com/watch?v=zrAllccwz5I" target="_blank" rel="noopener noreferrer">lineup tutorials</a> with <a href="https://trello.com/" target="_blank" rel="noopener noreferrer">kanban boards</a> and <a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer">Stack Overflow</a>.
           </p>
           <p className='body'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec augue id nibh aliquam vulputate. Aenean sem tortor, vulputate vel laoreet ac, malesuada eget ante. Vivamus aliquet vulputate malesuada.
+            Nowadays, I try live by the motto of <span className='emphasis'>“doing stuff you care about, and doing it well.”</span> I've delved deeper into CS, building the backend of a <a href="https://biblebot.xyz/" target="_blank" rel="noopener noreferrer">Discord bot</a> and learning front-end design and tech for a new <a href="https://www.instagram.com/project_emory_/" target="_blank" rel="noopener noreferrer">project-building community</a> on Emory's campus. In true liberal arts fashion, I've also cleaned cobwebs out of an <a href="https://emory.campuslabs.com/engage/organization/outdoor-emory" target="_blank" rel="noopener noreferrer">outdoor club's</a> old shed :P. With this motto in mind, I aspire towards a career allowing me to further channel my passion for building good products for great people.
           </p>
           <p className='body'>
-            While I'm not working on a problem set or programming, you can find me backpacking, hanging out with friends, playing guitar for RUF Emory, or tackling some quests on my 3 year old Sevtech Ages save.
+            While I'm not working on a problem set or programming, you can find me backpacking, hanging out with friends, playing guitar for RUF Emory, or tackling some quests on my 3 year old Sevtech Ages save (I do still play video games :D).
           </p>
         </section>
         
         <div className='startline'></div>
 
-        {/* TODO: gradient, hover effects, smart collapse */}
-
         <section id='experience' className='line'>
           <div className='narrowcontent'>
-            <ExperiencePane
-              pos='Software Engineer'
-              group='Kerygma Digital'
-              date='Jun 2023 - Aug 2023'
-              desc={'Developed and improved BibleBot\'s easy quick reference features for 4m+ users across 51,000+ Discord servers, \nReduced service response latency by 60% (~400 ms) by implementing a custom configurable time-to-live HTTP cache'}
-              skills={['C#', 'ASP.NET', 'HTTP', 'Git']}
-            />
-
-            <ExperiencePane
-              pos='Software Engineer'
-              group='Kerygma Digital'
-              date='Jun 2023 - Aug 2023'
-              desc={'Developed and improved BibleBot\'s easy quick reference features for 4m+ users across 51,000+ Discord servers, \nReduced service response latency by 60% (~400 ms) by implementing a custom configurable time-to-live HTTP cache'}
-              skills={['C#', 'ASP.NET', 'HTTP', 'Git']}
-            />
-
-            <ExperiencePane
-              pos='Software Engineer'
-              group='Kerygma Digital'
-              date='Jun 2023 - Aug 2023'
-              desc={'Developed and improved BibleBot\'s easy quick reference features for 4m+ users across 51,000+ Discord servers, \nReduced service response latency by 60% (~400 ms) by implementing a custom configurable time-to-live HTTP cache'}
-              skills={['C#', 'ASP.NET', 'HTTP', 'Git']}
-            />
+            {
+              experience[0].map(entry => {
+                return (
+                  <ExperiencePane
+                    key={count++}
+                    pos={entry.pos}
+                    group={entry.group}
+                    groupurl={entry.groupurl}
+                    date={entry.date}
+                    desc={entry.desc}
+                    skills={entry.skills}
+                  />
+                )
+              })
+            }
           </div>
         </section>
 
         <section id='involvement' className='line'>
           <div className='narrowcontent'>
-            <ExperiencePane
-              pos='Project Lead'
-              group='Project Emory'
-              date='Aug 2023 - Present'
-              desc={'Lead development of the RIDEmory project, teaching project engineers technology such as MVC frameworks, Git, and React in order to provide easy access to automatically compiled rideshare information across Emory\'s campus.'}
-              skills={['Spring Boot', 'React', 'SCSS', 'Git', 'Flask', 'Figma', 'Canva']}
-            />
+            {
+              experience[1].map(entry => {
+                return (
+                  <ExperiencePane
+                    key={count++}
+                    pos={entry.pos}
+                    group={entry.group}
+                    groupurl={entry.groupurl}
+                    date={entry.date}
+                    desc={entry.desc}
+                    skills={entry.skills}
+                  />
+                )
+              })
+            }
 
-            <a href={Resume} target="_blank" rel="noopener noreferrer">
+            <a href='/resume.pdf' target="_blank" rel="noopener noreferrer">
               <InfoPane text='View full resume' border={true} url='' />
             </a>
           </div>
@@ -184,21 +184,20 @@ function Home() {
 
         <section id='projects' className='line'>
           <div className='projects'>
-            <ProjectPane
-              name='RIDEmory'
-              url=''
-              desc='A self-updating database of ride information for Emory students accessible either via the web or GroupMe.'
-              img='src/assets/ridemory.png'
-              skills={['Spring Boot', 'React', 'SCSS', 'Flask', 'Figma']}
-            />
-
-            <ProjectPane
-              name='Personal Website'
-              url=''
-              desc='The personal portfolio website you are currently reading! I built this in order to teach myself frontend software and design skills to better support my project team in Project Emory.'
-              img='src/assets/website.png'
-              skills={['React', 'TypeScript', 'Figma']}
-            />
+            {
+              projects.map(entry => {
+                return (
+                  <ProjectPane
+                    key={count++}
+                    name={entry.name}
+                    url={entry.url}
+                    desc={entry.desc}
+                    img={entry.img}
+                    skills={entry.skills}
+                  />
+                )
+              })
+            }
 
             {/* <InfoPane text='View my other projects' border={false} url='' /> */}
           </div>
@@ -207,13 +206,14 @@ function Home() {
         <section id='contact' className='line'>
           <div className='narrowcontent'>
             <ContactPane />
-            {/* TODO: prettier contact pane */}
           </div>
         </section>
 
         <div className='endline'></div>
 
-        <footer className='small'>Made with &lt;3 by yours truly. Designed in Figma, built with React, TypeScript, and Vite. If you're interested, get a sneak peak of my thought process and read the dev log here!</footer>
+        <footer className='small'>
+          Made with &lt;3 by yours truly. Designed in <a href="https://www.figma.com/file/JnrF4bZd49wXQkqQt8gn4y/Personal-Website?type=design&node-id=0%3A1&mode=design&t=w5XP0i1XKhbp5cU3-1" target="_blank" rel="noopener noreferrer">Figma</a>, built with <a href="https://react.dev/" target="_blank" rel="noopener noreferrer">React</a>, <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">TypeScript</a>, and <a href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer">Vite</a>. Inspired by <a href="https://brittanychiang.com/" target="_blank" rel="noopener noreferrer">Brittany Chiang's</a> and <a href="https://rpiloto.codes/" target="_blank" rel="noopener noreferrer">Rafael Piloto's</a> websites. If you're interested, get a sneak peak of my thought process and read the dev log <a href="https://github.com/andrewtlu/andrewtlu.github.io/tree/main/dev_log" target="_blank" rel="noopener noreferrer">here</a>! 
+          </footer>
       </main>
     </div>
   )

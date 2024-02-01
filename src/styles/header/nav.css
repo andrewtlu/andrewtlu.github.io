@@ -3,6 +3,7 @@
 .small a {
   display: flex;
   align-items: center;
+  gap: 0;
   
   color: var(--contrast-overlay);
   height: 2.2rem;

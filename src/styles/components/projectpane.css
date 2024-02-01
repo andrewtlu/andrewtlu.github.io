@@ -11,13 +11,17 @@
   cursor: pointer;
 
   display: flex;
-  flex-direction: row;
-  gap: 10px;
   background-color: var(--mantle);
   border-radius: var(--radius);
 }
 
-.projectpane:nth-child(even) {
+a {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.projectpane:nth-child(even) a {
   flex-direction: row-reverse;
 }
 
@@ -28,6 +32,10 @@
 }
 
 img {
+  position: relative;
+  top: 0;
+  left: 0;
+
   max-width: 40%;
   aspect-ratio: 16/9;
   
@@ -35,6 +43,12 @@ img {
   object-position: top;
   border-radius: var(--radius);
   border: var(--thickness) solid var(--crust)
+}
+
+img:hover {
+  top: -3px;
+  left: -3px;
+  box-shadow: 3px 3px 0 var(--accent);
 }
 
 .title {
@@ -47,6 +61,10 @@ img {
   font-weight: 600 !important;
 }
 
+.projectpane:hover .title .body {
+  color: var(--accent);
+}
+
 .title .redirect {
   position: relative;
   top: 0;
@@ -56,6 +74,7 @@ img {
 }
 
 .projectpane:hover .redirect {
+  color: var(--accent);
   top: -3px;
   left: 3px;
 }

@@ -21,6 +21,7 @@ h2 {
 
   font-weight: 400;
   font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .small {
@@ -28,6 +29,7 @@ h2 {
 
   font-weight: 400;
   font-size: 0.875rem;
+  line-height: 1.15rem;
 }
 
 .tiny {
@@ -35,4 +37,8 @@ h2 {
 
   font-weight: 400;
   font-size: 0.75rem;
+}
+
+.emphasis {
+  font-weight: 600 !important;
 }
