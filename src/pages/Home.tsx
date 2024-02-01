@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ContactPane, ExperiencePane, ProjectPane, InfoPane } from '../components/panes.tsx'
+import { ContactPane, ExperiencePane, ProjectPane, InfoPane, SectionPane } from '../components/panes.tsx'
 import { Socials } from '../components/svgs.tsx'
 import { useEffect } from 'react';
 import { ResetSkills } from '../components/buttons.tsx';
@@ -125,6 +125,8 @@ function Home() {
       </header>
       <main>
         <section id='about'>
+          <SectionPane name='about' />
+
           <p className='body'>
             When my mom found out my “self-directed interest” in Computer Science was just a ploy for more video game time, she enrolled me in an introductory Java course to discourage any further deception from me. Little did she know, that Java course's final project began the process of replacing <a href="https://borg286.github.io/sevtech/" target="_blank" rel="noopener noreferrer">questing</a> and <a href="https://www.youtube.com/watch?v=zrAllccwz5I" target="_blank" rel="noopener noreferrer">lineup tutorials</a> with <a href="https://trello.com/" target="_blank" rel="noopener noreferrer">kanban boards</a> and <a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer">Stack Overflow</a>.
           </p>
@@ -139,6 +141,8 @@ function Home() {
         <div className='startline'></div>
 
         <section id='experience' className='line'>
+          <SectionPane name='experience' />
+
           <div className='narrowcontent'>
             {
               experience[0].map(entry => {
@@ -159,6 +163,8 @@ function Home() {
         </section>
 
         <section id='involvement' className='line'>
+          <SectionPane name='involvement' />
+
           <div className='narrowcontent'>
             {
               experience[1].map(entry => {
@@ -183,6 +189,8 @@ function Home() {
         </section>
 
         <section id='projects' className='line'>
+          <SectionPane name='projects' />
+
           <div className='projects'>
             {
               projects.map(entry => {
@@ -204,6 +212,8 @@ function Home() {
         </section>
 
         <section id='contact' className='line'>
+          <SectionPane name='contact' />
+
           <div className='narrowcontent'>
             <ContactPane />
           </div>

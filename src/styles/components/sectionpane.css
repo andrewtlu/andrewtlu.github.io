@@ -1,0 +1,29 @@
+.sectionpane {
+  position: sticky;
+  top: 0;
+
+  display: none;
+  align-items: center;
+  justify-content: left;
+  width: 101%;
+  z-index: 2;
+  
+  padding: 0.7rem 0;
+  margin: 1rem;
+
+  
+  border-radius: var(--radius);
+  background-color: var(--base);
+  opacity: 95%;
+}
+
+.sectionpane .body {
+  text-transform: uppercase;
+  font-weight: 700 !important;
+}
+
+@media screen and (max-width: 800px) {
+  .sectionpane {
+    display: flex;
+  }
+}

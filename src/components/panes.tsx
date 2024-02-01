@@ -153,3 +153,13 @@ export function ContactPane() {
     </div>
   );
 }
+
+export function SectionPane(props: {name: string}) {
+  return (
+    <a href={'#' + props.name} className='sectionpane'>
+      <p className='body'>
+        {props.name}
+      </p>
+    </a>
+  )
+}

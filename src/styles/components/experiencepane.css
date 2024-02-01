@@ -92,7 +92,7 @@
   font-weight: 600 !important;
 }
 
-.experiencepane .employer:hover {
+.experiencepane .employer:hover, .experiencepane .employer:active {
   color: var(--accent);
   font-weight: 600 !important;
 }
@@ -105,7 +105,7 @@
   width: 20px;
 }
 
-.employer:hover .redirect {
+.employer:hover .redirect, .employer:active .redirect {
   color: var(--accent);
   top: -3px;
   left: -5px;
@@ -115,4 +115,11 @@
   transition: all 0.1s linear; /* not using --animation variable because max-height fix messes with timings */
   overflow-y: hidden;
   max-height: var(--max-height); /* here is the janky fix I was talking about */
+}
+
+@media screen and (max-width: 1023px) {
+  .experiencepane .panebody>.small {
+    transition: all 0.2s linear; /* not using --animation variable because max-height fix messes with timings */
+    max-height: 12rem;
+  }
 }

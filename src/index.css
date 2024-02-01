@@ -65,6 +65,7 @@ svg {
 
 .arrow, .redirect, .chat, .projectsvg, .resumenoanchorsvg {
   color: var(--contrast-overlay);
+  flex-shrink: 0;
 }
 
 
@@ -98,7 +99,7 @@ body {
   }
 } */
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 800px) {
   body {
     border: var(--thickness) solid var(--accent);
     border-top: none;

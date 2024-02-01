@@ -22,7 +22,7 @@ export function SkillButton(props: {skill: string}) {
 export function HiButton() {
   return (
     <a href="mailto:andrewlulu2012@gmail.com">
-      <button className='hibutton'>
+      <button className='hibutton body'>
         Say hi!
       </button>
     </a>

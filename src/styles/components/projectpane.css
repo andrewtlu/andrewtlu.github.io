@@ -61,7 +61,7 @@ img:hover {
   font-weight: 600 !important;
 }
 
-.projectpane:hover .title .body {
+.projectpane:hover .title .body, .projectpane:active .title .body {
   color: var(--accent);
 }
 
@@ -73,7 +73,7 @@ img:hover {
   width: 20px;
 }
 
-.projectpane:hover .redirect {
+.projectpane:hover .redirect, .projectpane:active .redirect {
   color: var(--accent);
   top: -3px;
   left: 3px;

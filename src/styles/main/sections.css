@@ -29,7 +29,7 @@
   color: var(--accent);
 }
 
-#about .body a:hover {
+#about .body a:hover, #about .body a:active {
   color: var(--accent);
   filter: brightness(120%)
 }
