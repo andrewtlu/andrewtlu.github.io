@@ -11,7 +11,14 @@
     "url": "https://github.com/PROJECT-Emory-2023/RIDEmory",
     "desc": "A full-stack self-updating database of ride information for Emory students accessible either via the web or through GroupMe. Currently a work in progress, make sure to watch the repository in order to stay up to date with our progress!",
     "img": "/ridemory.png",
-    "skills": ["Java", "Maven", "Spring Boot", "React", "Python", "Flask", "SpaCy", "Figma", "Git"]
+    "skills": ["Java", "Spring Boot", "MongoDB Atlas", "React", "JavaScript", "Python", "Flask", "SpaCy", "Figma", "Git"]
+  },
+  {
+    "name": ".dotfiles",
+    "url": "https://github.com/andrewtlu/dotfiles",
+    "desc": "A collection of all my custom dotfiles, including a script to automatically install all dependencies, styles, and configurations in a single command.",
+    "img": "/dotfiles.png",
+    "skills": ["Shell", "Unix"]
   },
   {
     "name": "Memly",
@@ -20,6 +27,14 @@
     "img": "/memly.png",
     "skills": ["Svelte", "TypeScript", "Tailwind CSS", "Figma"]
   },
+  {
+    "name": "BibleBot",
+    "url": "https://gitlab.com/kerygmadigital/biblebot/BibleBot/-/tree/master",
+    "desc": "Scripture from your Discord client to your heart. An integrated quick-reference Discord bot used by 4m+ users across 51,000+ Discord servers.",
+    "img": "/biblebot.png",
+    "skills": ["C#", "ASP.NET", "MongoDB Atlas", "Git"]
+  },
+
   {
     "name": "Voice Calculator",
     "url": "https://github.com/andrewtlu/VoiceCalculator/",

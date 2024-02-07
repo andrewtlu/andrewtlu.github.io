@@ -112,6 +112,7 @@
 }
 
 .experiencepane .panebody>.small {
+  position: relative;
   transition: all 0.1s linear; /* not using --animation variable because max-height fix messes with timings */
   overflow-y: hidden;
   max-height: var(--max-height); /* here is the janky fix I was talking about */

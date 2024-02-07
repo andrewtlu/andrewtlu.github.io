@@ -13,6 +13,10 @@
   gap: 8px;
 }
 
+.skills:empty {
+  display: none;
+}
+
 /* hover */
 .experiencepane:hover, .infopane:not(#borderless):hover, .contactpane:hover {
   top: -3px;

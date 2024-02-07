@@ -6,7 +6,7 @@
       "groupurl": "https://ats.emory.edu/sdl/",
       "date": "Aug 2023 - Present",
       "desc": "Manage Cox Computing Center's collaboration space and help students with technical assistance for personal computers, computer workstations, screencast equipment, and various consoles. Maintain campus-wide printer and computer network.",
-      "skills": []
+      "skills": ["Debugging", "Operating Systems", "Networking"]
     },
     {
       "pos": "Software Engineer",
@@ -40,7 +40,7 @@
       "groupurl": "https://emory.campuslabs.com/engage/organization/outdoor-emory",
       "date": "Feb 2023 - Feb 2024",
       "desc": "Organized, serviced, and inventoried equipment for Outdoor Emory trips and Emory RecWell rentals in order to provide 1000+ students with safe and affordable access to the outdoors. Cleaned unusable space in Emory's gym to move $15,000+ of equipment and prevent climate-related gear degredation.",
-      "skills": []
+      "skills": ["Organization", "Microsoft Excel"]
     }
   ]
 ]

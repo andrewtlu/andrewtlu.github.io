@@ -71,7 +71,7 @@ export function ExperiencePane(props: ExperiencePaneProps) {
         <div className='small'>
           {props.desc}
         </div>
-
+        
         <div className='skills'>
           {
             props.skills.map(skill => {

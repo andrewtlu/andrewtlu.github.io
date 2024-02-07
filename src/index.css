@@ -34,7 +34,7 @@
   background-color: var(--base);
   color: var(--contrast-base);
   color-scheme: light dark;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
   line-height: normal;
   text-justify: center;
 
