@@ -5,10 +5,10 @@
   display: none;
   align-items: center;
   justify-content: left;
-  width: 101%;
+  width: calc(100% + 2rem);
   z-index: 2;
   
-  padding: 0.7rem 0;
+  padding: 0.7rem 1rem;
   margin: 1rem;
 
   
