@@ -13,7 +13,7 @@
       "group":  "Kerygma Digital",
       "groupurl": "https://kerygma.digital/",
       "date": "Jun 2023 - Jul 2023",
-      "desc": "Developed and improved BibleBot's easy quick reference features for 4m+ users across 51,000+ Discord servers. Reduced service response latency by 60% (~400 ms) by implementing a custom configurable time-to-live HTTP cache.",
+      "desc": "Developed and improved BibleBot's easy quick reference features for 5m+ users across 60,000+ Discord servers. Reduced service response latency by 60% (~400 ms) by implementing a custom configurable time-to-live HTTP cache.",
       "skills": ["C#", "ASP.NET", "MongoDB Atlas", "Git"]
     }
   ],
@@ -31,8 +31,8 @@
       "group": "Emory Hack4Impact",
       "groupurl": "https://emory-hack4impact.github.io/",
       "date": "Dec 2023 - Present",
-      "desc": "Build an automated survey service for Odyssey Family Consulting Center, connecting their CoreLogic database with their website in order to eliminate the need for manually entering and looking up user experience survey data. Currently a work in progress!",
-      "skills": ["JavaScript", "Git"]
+      "desc": "Build and design an internal operations webpage to provide Odyssey Family Consulting Center a unified employee experience, including a comprehensive people directory, announcements board, employee profiles, personal dashboards, resource center, and a HR services portal.",
+      "skills": ["JavaScript", "Figma", "Git"]
     },
     {
       "pos": "Equipment Manager & Head Backpacking Trip Leader",

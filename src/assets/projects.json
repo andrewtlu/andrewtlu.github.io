@@ -4,7 +4,7 @@
     "url": "https://github.com/andrewtlu/andrewtlu.github.io",
     "desc": "The personal portfolio website you are currently reading! I built this in order to teach myself frontend software and design skills to better support my project team in Project Emory.",
     "img": "/website.png",
-    "skills": ["React", "TypeScript", "Vite", "Figma"]
+    "skills": ["React", "TypeScript", "Vite", "Figma", "Git"]
   },
   {
     "name": "RIDEmory",
@@ -18,19 +18,19 @@
     "url": "https://github.com/andrewtlu/dotfiles",
     "desc": "A collection of all my custom dotfiles, including a script to automatically install all dependencies, styles, and configurations in a single command.",
     "img": "/dotfiles.png",
-    "skills": ["Shell", "Unix"]
+    "skills": ["Shell", "Unix", "Git"]
   },
   {
     "name": "Memly",
     "url": "https://github.com/memly-ai/memly",
     "desc": "A 48-hour minimum viable product built for HackATL. Proof of concept for a general purpose spaced-repetition progress tracker app.",
     "img": "/memly.png",
-    "skills": ["Svelte", "TypeScript", "Tailwind CSS", "Figma"]
+    "skills": ["Svelte", "TypeScript", "Tailwind CSS", "Figma", "Git"]
   },
   {
     "name": "BibleBot",
     "url": "https://gitlab.com/kerygmadigital/biblebot/BibleBot/-/tree/master",
-    "desc": "Scripture from your Discord client to your heart. An integrated quick-reference Discord bot used by 4m+ users across 51,000+ Discord servers.",
+    "desc": "Scripture from your Discord client to your heart. An integrated quick-reference Discord bot used by 5m+ users across 60,000+ Discord servers.",
     "img": "/biblebot.png",
     "skills": ["C#", "ASP.NET", "MongoDB Atlas", "Git"]
   },
