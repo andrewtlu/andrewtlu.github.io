@@ -5,7 +5,7 @@
       "group": "Emory University Student Digital Life",
       "groupurl": "https://ats.emory.edu/sdl/",
       "date": "Aug 2023 - Present",
-      "desc": "Manage Cox Computing Center's collaboration space and help students with technical assistance for personal computers, computer workstations, screencast equipment, and various consoles. Maintain campus-wide printer and computer network.",
+      "desc": "Maintain friendly environment free of technical difficulties for students and faculty by managing CCCH's A/V system. Provide a secure, up-to-date online experience for 200+ students by servicing CCCH's 32 computers and 4 printers.",
       "skills": ["Debugging", "Operating Systems", "Networking"]
     },
     {
@@ -13,7 +13,7 @@
       "group":  "Kerygma Digital",
       "groupurl": "https://kerygma.digital/",
       "date": "Jun 2023 - Jul 2023",
-      "desc": "Developed and improved BibleBot's easy quick reference features for 5m+ users across 60,000+ Discord servers. Reduced service response latency by 60% (~400 ms) by implementing a custom configurable time-to-live HTTP cache.",
+      "desc": "Reduced service response latency by 60% (~400 ms) by implementing a custom configurable time-to-live HTTP cache in order to create a more responsive experience for 5m+ BibleBot users across 60,000+ Discord server. Decreased HTML and JSON cache usage by 99% and 39% by creating custom middleware to strip stored responses.",
       "skills": ["C#", "ASP.NET", "MongoDB Atlas", "Git"]
     }
   ],
@@ -23,7 +23,7 @@
       "group": "Project Emory",
       "groupurl": "https://github.com/PROJECT-Emory-2023",
       "date": "Aug 2023 - Present",
-      "desc": "Lead development of RIDEmory's backend services in order to provide easy access to automatically compiled rideshare information across Emory's campus. Teach project engineers technology such as MVC frameworks, advanced Java features, version control, and React through presentations and practice.",
+      "desc": "Lead development of RIDEmory's backend services in order to provide easy access to automatically compiled rideshare information across Emory's campus. Teach technologies such as Spring Boot, MongoDB, React, and Git through guided practice to provide working CS experience to 20+ members as Emory's only open project-building club.",
       "skills": ["Java", "Spring Boot", "MongoDB Atlas", "React", "JavaScript", "Flask", "Git"]
     },
     {
@@ -31,16 +31,8 @@
       "group": "Emory Hack4Impact",
       "groupurl": "https://emory-hack4impact.github.io/",
       "date": "Dec 2023 - Present",
-      "desc": "Build and design an internal operations webpage to provide Odyssey Family Consulting Center a unified employee experience, including a comprehensive people directory, announcements board, employee profiles, personal dashboards, resource center, and a HR services portal.",
-      "skills": ["JavaScript", "Figma", "Git"]
-    },
-    {
-      "pos": "Equipment Manager & Head Backpacking Trip Leader",
-      "group": "Outdoor Emory",
-      "groupurl": "https://emory.campuslabs.com/engage/organization/outdoor-emory",
-      "date": "Feb 2023 - Feb 2024",
-      "desc": "Organized, serviced, and inventoried equipment for Outdoor Emory trips and Emory RecWell rentals in order to provide 1000+ students with safe and affordable access to the outdoors. Cleaned unusable space in Emory's gym to move $15,000+ of equipment and prevent climate-related gear degredation.",
-      "skills": ["Organization", "Microsoft Excel"]
+      "desc": "Design and develop an internal operations webpage including an announcements board, HR service page, personal dashboard, and resources page to provide Odyssey Family Consulting Center with a unified employee experience. Build and maintain software solutions for non-profits in Atlanta to enable better community service.",
+      "skills": ["HTML", "CSS", "JavaScript", "Figma", "Git"]
     }
   ]
 ]

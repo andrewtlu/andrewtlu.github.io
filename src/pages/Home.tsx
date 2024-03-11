@@ -83,7 +83,7 @@ function Home() {
               </Link>
             </h1>
             <h2>CS Undergrad @ Emory</h2>
-            <p className='body'>Currently combatting procrastination and imposter syndrome :P</p>
+            <p className='body'>Defeater of ML problem sets and unsanitized data :P</p>
           </div>
           <nav>
             <ul className='small'>
