@@ -1,8 +1,0 @@
-@import url(./styles/header/header.css);
-@import url(./styles/main/main.css);
-
-/* links main stylesheets */
-
-.content {
-  display: flex;
-}
