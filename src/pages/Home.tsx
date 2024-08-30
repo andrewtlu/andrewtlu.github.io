@@ -12,7 +12,7 @@ function debounce(func: Function, delay: number) {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), delay);
   };
-};
+}
 
 // clear active id
 function unselectElements(elements: (Element | null)[]) {
@@ -49,13 +49,13 @@ function Home() {
     
     const scrollHandler = () => {
       for (let i = 0; i < sections.length; i++) {
-        let clientView = sections[i].getBoundingClientRect();
+        const clientView = sections[i].getBoundingClientRect();
         if (clientView.top <= 0 && clientView.bottom >= 32) {
           // change accent color
           // document.documentElement.style.setProperty('--accent', i % 2 == 1 ? 'var(--accent-1)' : 'var(--accent-2)');
           
           // update nav
-          let element = navElements[i]
+          const element = navElements[i]
           if (element instanceof Element) {
             unselectElements(navElements);
             element.id = 'active';
@@ -69,7 +69,7 @@ function Home() {
     document.addEventListener('scroll', debounce(scrollHandler, 250))
   }, []);
 
-  var count = 0;
+  let count = 0;
 
   return (
     <div className='content'>

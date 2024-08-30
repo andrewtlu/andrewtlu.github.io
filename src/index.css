@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-@import './styles/text.css';
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import "./styles/text.css";
 
 /* project-wide general styles */
 
@@ -45,7 +45,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 /* list and anchor style */
 
 ul li {
@@ -57,18 +56,20 @@ a {
   color: inherit;
 }
 
-
 /* svg styles */
 
 svg {
   width: 25px;
 }
 
-.arrow, .redirect, .chat, .projectsvg, .resumenoanchorsvg {
+.arrow,
+.redirect,
+.chat,
+.projectsvg,
+.resumenoanchorsvg {
   color: var(--contrast-overlay);
   flex-shrink: 0;
 }
-
 
 /* general layout */
 
