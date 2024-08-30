@@ -32,7 +32,7 @@
     "url": "/CS_334_Final_Report.pdf",
     "desc": "A Python toolkit used to transform and augment audio into Mel Spectrograms and allow for easy processing in pre-trained convolutional neural networks. Applied transfer learning from the ImageNet dataset and achieved 78.6% accuracy over 6 emotions. This was my Machine Learning course's final project.",
     "img": "/emotion-classification.png",
-    "skills": ["Python", "Pytorch", "Numpy", "Git", "Transfer Learning"]
+    "skills": ["Python", "PyTorch", "Numpy", "Git", "Transfer Learning"]
   },
   {
     "name": ".dotfiles",
