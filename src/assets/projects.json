@@ -8,10 +8,31 @@
   },
   {
     "name": "RIDEmory",
-    "url": "https://github.com/PROJECT-Emory-2023/RIDEmory",
-    "desc": "A full-stack self-updating database of ride information for Emory students accessible either via the web or through GroupMe. Currently a work in progress, make sure to watch the repository in order to stay up to date with our progress!",
+    "url": "https://github.com/project-emory/RIDEmory",
+    "desc": "A full-stack, comprehensive, self-updating rideshare solution for Emory students accessible either via the web or through GroupMe. Currently a work in progress - this project is used to teach Project Emory members parts of the tech stack that are taught in the Project Emory curriculum.",
     "img": "/ridemory.png",
-    "skills": ["Java", "Spring Boot", "MongoDB Atlas", "React", "JavaScript", "Python", "Flask", "SpaCy", "Figma", "Git"]
+    "skills": ["Java", "Spring Boot", "Spring Security", "MongoDB Atlas", "Firebase", "React", "Figma", "GitHub Actions", "Git"]
+  },
+  {
+    "name": "Canyon",
+    "url": "https://github.com/emory-canyoneers/canyon",
+    "desc": "A full-stack messaging app used to facilitate casual, in-person debates among new friends to allow for better connections. This was my CS Practicum class's project.",
+    "img": "/canyon.png",
+    "skills": ["Java", "Spring Boot", "MongoDB Atlas", "Firebase", "React Native", "Docker", "Bash", "AWS EC2", "Git"]
+  },
+  {
+    "name": "Resume Revamper",
+    "url": "https://github.com/andrewtlu/resume-revamper",
+    "desc": "A web-based resume editor powered by Claude used to minimize low-level text decisions such as word choice and phrasing and focus on big-picture content goals. Automatically parses PDF resumes and outputs a PDF resume when editing is done. This was my Natural Language Processing course's final project.",
+    "img": "/resume-revamper.png",
+    "skills": ["React", "Python", "Flask", "LuaLaTeX", "Prompt Engineering", "Natural Language Processing", "Git"]
+  },
+  {
+    "name": "Efficient Speech Emotion Classification",
+    "url": "/CS_334_Final_Report.pdf",
+    "desc": "A Python toolkit used to transform and augment audio into Mel Spectrograms and allow for easy processing in pre-trained convolutional neural networks. Applied transfer learning from the ImageNet dataset and achieved 78.6% accuracy over 6 emotions. This was my Machine Learning course's final project.",
+    "img": "/emotion-classification.png",
+    "skills": ["Python", "Pytorch", "Numpy", "Git", "Transfer Learning"]
   },
   {
     "name": ".dotfiles",
