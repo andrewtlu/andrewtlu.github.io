@@ -1,5 +1,3 @@
-<!-- todo: github actions for deploy, link domain, add blog -->
-
 <ul>
   <li>christian, emory alum, svelte apologist</li>
   <li>current swe @ jpmc</li>

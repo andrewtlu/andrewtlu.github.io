@@ -17,16 +17,27 @@
   body {
     @apply font-mono;
   }
-}
 
-@layer components {
-  .img {
+  img {
     /* border-radius: var(--radius-md); */
     border-radius: 100%;
   }
 
-  .link {
-    text-decoration: underline;
+  a {
+    text-decoration-line: underline;
     cursor: pointer;
   }
+
+  button {
+    cursor: pointer;
+    background-color: var(--color-gray-200);
+    border-radius: var(--radius-md);
+  }
+
+  input {
+    outline-color: red;
+  }
+}
+
+@layer components {
 }
