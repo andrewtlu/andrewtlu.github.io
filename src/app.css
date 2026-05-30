@@ -16,6 +16,7 @@
 @layer base {
   body {
     @apply font-mono;
+    @apply text-gray-700;
   }
 
   img {
@@ -24,7 +25,9 @@
   }
 
   a {
+    @apply text-black;
     text-decoration-line: underline;
+    font-weight: var(--font-weight-semibold);
     cursor: pointer;
   }
 
