@@ -12,7 +12,7 @@
     <div class="flex flex-row justify-between w-full">
       <a href={resolve("/")} class="flex flex-row gap-4 max-w-1/2 items-center no-underline!">
         <img src={me} alt="Andrew on Guam" class="img h-10" />
-        <h1 class="text-3xl">
+        <h1 class="text-3xl font-bold">
           Andrew <span class="hidden sm:inline-block">Lu</span>
         </h1>
       </a>

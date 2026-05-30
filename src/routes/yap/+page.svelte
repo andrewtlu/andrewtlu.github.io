@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Post from "$lib/components/Post.svelte";
+
   let newest = $state(true);
   let filter = $state("");
 </script>
@@ -17,8 +19,12 @@
         ▲
       {/if}
     </button>
+    <!-- would be nice to implement date filtering and have some clean placeholder -->
     <input placeholder="filter" bind:value={filter} />
   </div>
 </div>
 
-<div>post</div>
+<Post title="testasdfsadfadfas" date={new Date(Date.now())}>
+  <div>content content content</div>
+  <div>content content content</div>
+</Post>
