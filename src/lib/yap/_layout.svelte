@@ -13,6 +13,8 @@ layout for posts, used by mdsvex
   let expanded = $state(true);
 </script>
 
+<!-- TODO: style posts -->
+
 <div class="w-full flex flex-col gap-4">
   <div class="flex flex-col flex-wrap max-w-full items-end">
     <div class="relative flex gap-2 items-center">

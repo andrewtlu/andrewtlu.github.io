@@ -42,7 +42,12 @@
 </div>
 
 {#if filteredPosts.length === 0}
-  nothing here! broaden search or wait a while :)
+  nothing here!
+  {#if parsedFilter.length > 0}
+    try broadening your search
+  {:else}
+    come back soon
+  {/if} :)
 {/if}
 {#each filteredPosts as post, idx (idx)}
   <post.component />
