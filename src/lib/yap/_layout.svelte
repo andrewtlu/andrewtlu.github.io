@@ -1,7 +1,15 @@
+<!-- @component
+layout for posts, used by mdsvex
+ -->
 <script lang="ts">
   import type { Snippet } from "svelte";
 
-  let { title, date, children }: { title: string; date: Date; children: Snippet } = $props();
+  let {
+    title,
+    date: _date,
+    children,
+  }: { title: string; date: string; children: Snippet } = $props();
+  let date = $derived(new Date(_date));
   let expanded = $state(true);
 </script>
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Post from "$lib/components/Post.svelte";
+  import Test from "$lib/yap/test.svx";
 
   let newest = $state(true);
   let filter = $state("");
@@ -24,7 +24,4 @@
   </div>
 </div>
 
-<Post title="testasdfsadfadfas" date={new Date(Date.now())}>
-  <div>content content content</div>
-  <div>content content content</div>
-</Post>
+<Test />
