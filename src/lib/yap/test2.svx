@@ -1,0 +1,12 @@
+---
+title: test 2
+date: 2026-05-30T18:06:01+10:00
+raw: >
+    # test 2
+
+    foo bar
+---
+
+# test 2
+
+foo bar

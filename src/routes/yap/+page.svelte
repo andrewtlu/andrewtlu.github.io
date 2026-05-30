@@ -1,8 +1,25 @@
 <script lang="ts">
-  import Test from "$lib/yap/test.svx";
+  import posts, { type Post } from "$lib/yap";
 
   let newest = $state(true);
   let filter = $state("");
+  let parsedFilter = $derived(filter.toLowerCase());
+
+  const includePost = $derived((post: Post) => {
+    return (
+      post.title.toLowerCase().includes(parsedFilter) ||
+      post.date.toISOString().toLowerCase().includes(parsedFilter) ||
+      post.raw.toLowerCase().includes(parsedFilter)
+    );
+  });
+
+  let filteredPosts = $derived(
+    posts
+      .filter((post) => includePost(post))
+      .toSorted((a, b) =>
+        newest ? b.date.getTime() - a.date.getTime() : a.date.getTime() - b.date.getTime(),
+      ),
+  );
 </script>
 
 <div class="flex justify-end w-full">
@@ -24,4 +41,9 @@
   </div>
 </div>
 
-<Test />
+{#if filteredPosts.length === 0}
+  nothing here! broaden search or wait a while :)
+{/if}
+{#each filteredPosts as post, idx (idx)}
+  <post.component />
+{/each}

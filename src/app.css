@@ -33,10 +33,6 @@
     background-color: var(--color-gray-200);
     border-radius: var(--radius-md);
   }
-
-  input {
-    outline-color: red;
-  }
 }
 
 @layer components {

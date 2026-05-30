@@ -17,8 +17,11 @@ const config = {
     vitePreprocess(),
   ],
   compilerOptions: {
-    // Force runes mode for the project, except for libraries. Can be removed in svelte 6.
-    // runes: ({ filename }) => (filename.split(/[/\\]/).includes("node_modules") ? undefined : true),
+    // Force runes mode for the project, except for libraries and svx for mdsvex. Can be removed in svelte 6.
+    runes: ({ filename }) =>
+      filename.split(/[/\\]/).includes("node_modules") || filename.split(".").includes("svx")
+        ? undefined
+        : true,
   },
   kit: {
     // use static adapter instead of auto
