@@ -18,7 +18,9 @@ layout for posts, used by mdsvex
 <div class="w-full flex flex-col gap-4">
   <div class="flex flex-col flex-wrap max-w-full items-end">
     <div class="relative flex gap-2 items-center">
-      <h2 class="text-xl font-semibold wrap-break-word text-right inline-block">{title}</h2>
+      <h2 class="text-xl font-bold wrap-break-word text-right inline-block text-black">
+        {title}
+      </h2>
       <button
         onclick={() => {
           expanded = !expanded;

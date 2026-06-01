@@ -1,5 +1,6 @@
 import adapter from "@sveltejs/adapter-static";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+import { enhancedImages } from "mdsvex-enhanced-images";
 import { mdsvex } from "mdsvex";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
@@ -13,6 +14,7 @@ const config = {
     mdsvex({
       extensions: [".svx"],
       layout: join(__dirname, "./src/lib/yap/_layout.svelte"),
+      remarkPlugins: [enhancedImages],
     }),
     vitePreprocess(),
   ],
