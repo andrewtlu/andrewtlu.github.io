@@ -15,6 +15,7 @@ const config = {
       extensions: [".svx"],
       layout: join(__dirname, "./src/lib/yap/_layout.svelte"),
       remarkPlugins: [enhancedImages],
+      smartypants: false,
     }),
     vitePreprocess(),
   ],
