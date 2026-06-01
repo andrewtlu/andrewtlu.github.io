@@ -16,17 +16,80 @@
 @layer base {
   body {
     @apply font-mono;
+    @apply text-gray-700;
+  }
+
+  img {
+    border-radius: var(--radius-md);
+  }
+
+  a {
+    @apply text-black;
+    text-decoration-line: underline;
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: var(--color-gray-200);
+    border-radius: var(--radius-md);
+  }
+
+  /* svx post styling */
+  .post h1 {
+    @apply text-3xl;
+    @apply font-semibold;
+    @apply text-black;
+  }
+
+  .post h2 {
+    @apply text-2xl;
+    @apply font-semibold;
+    @apply text-black;
+  }
+
+  .post h3 {
+    @apply text-xl;
+    @apply font-semibold;
+    @apply text-black;
+  }
+
+  .post h4 {
+    @apply text-lg;
+    @apply font-semibold;
+    @apply text-black;
+  }
+
+  .post h5 {
+    @apply text-lg;
+    @apply font-medium;
+    @apply text-black;
+  }
+
+  .post h6 {
+    @apply text-lg;
+    @apply font-normal;
+    @apply text-black;
+  }
+
+  .post code {
+    @apply bg-gray-200;
+    @apply rounded-md;
+    @apply px-1;
+  }
+
+  .post ul {
+    @apply list-disc;
+    @apply pl-6;
   }
 }
 
 @layer components {
-  .img {
-    /* border-radius: var(--radius-md); */
-    border-radius: 100%;
-  }
-
-  .link {
-    text-decoration: underline;
-    cursor: pointer;
+  .post {
+    @apply flex;
+    @apply flex-col;
+    @apply gap-6;
+    @apply w-full;
   }
 }
