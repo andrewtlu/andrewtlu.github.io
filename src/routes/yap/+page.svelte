@@ -5,10 +5,12 @@
   let filter = $state("");
   let parsedFilter = $derived(filter.toLowerCase());
 
+  // will need to refactor this eventually for advanced filtering
   const includePost = $derived((post: Post) => {
     return (
       post.title.toLowerCase().includes(parsedFilter) ||
       post.date.toISOString().toLowerCase().includes(parsedFilter) ||
+      post.posted.toISOString().toLowerCase().includes(parsedFilter) ||
       post.raw.toLowerCase().includes(parsedFilter)
     );
   });

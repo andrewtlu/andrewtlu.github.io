@@ -7,13 +7,13 @@ layout for posts, used by mdsvex
   let {
     title,
     date: _date,
+    posted: _posted,
     children,
-  }: { title: string; date: string; children: Snippet } = $props();
+  }: { title: string; date: string; posted: string; children: Snippet } = $props();
   let date = $derived(new Date(_date));
+  let posted = $derived(new Date(_posted));
   let expanded = $state(true);
 </script>
-
-<!-- TODO: style posts -->
 
 <div class="w-full flex flex-col gap-4">
   <div class="flex flex-col flex-wrap max-w-full items-end">
@@ -36,10 +36,11 @@ layout for posts, used by mdsvex
         </div>
       </button>
     </div>
-    <h3 class="text-sm font-light">{date.toISOString()}</h3>
+    <h3 class="text-sm font-light text-gray-500">dated {date.toISOString()}</h3>
+    <h3 class="text-sm font-light text-gray-500">posted {posted.toISOString()}</h3>
   </div>
   {#if expanded}
-    <div class="flex flex-col gap-2 w-full">
+    <div class="post">
       {@render children()}
     </div>
   {/if}

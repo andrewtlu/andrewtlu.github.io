@@ -37,42 +37,59 @@
   }
 
   /* svx post styling */
-  h1 {
+  .post h1 {
     @apply text-3xl;
     @apply font-semibold;
     @apply text-black;
   }
 
-  h2 {
+  .post h2 {
     @apply text-2xl;
     @apply font-semibold;
     @apply text-black;
   }
 
-  h3 {
+  .post h3 {
     @apply text-xl;
     @apply font-semibold;
     @apply text-black;
   }
 
-  h4 {
+  .post h4 {
     @apply text-lg;
     @apply font-semibold;
     @apply text-black;
   }
 
-  h5 {
+  .post h5 {
     @apply text-lg;
     @apply font-medium;
     @apply text-black;
   }
 
-  h6 {
+  .post h6 {
     @apply text-lg;
     @apply font-normal;
     @apply text-black;
   }
+
+  .post code {
+    @apply bg-gray-200;
+    @apply rounded-md;
+    @apply px-1;
+  }
+
+  .post ul {
+    @apply list-disc;
+    @apply pl-6;
+  }
 }
 
 @layer components {
+  .post {
+    @apply flex;
+    @apply flex-col;
+    @apply gap-6;
+    @apply w-full;
+  }
 }
