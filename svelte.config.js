@@ -16,11 +16,14 @@ const config = {
       layout: join(__dirname, "./src/lib/yap/_layout.svelte"),
       remarkPlugins: [enhancedImages],
       smartypants: false,
+      // note to self: mdsvex parser uses `yaml`, which doesn't retain timezone info -- force
+      // timestamps to be strings using !!str if timezone information is desired
     }),
     vitePreprocess(),
   ],
   compilerOptions: {
-    // Force runes mode for the project, except for libraries and svx for mdsvex. Can be removed in svelte 6.
+    // force runes mode for the project, except for libraries and svx for mdsvex -- can remove in
+    // svelte 6
     runes: ({ filename }) =>
       filename.split(/[/\\]/).includes("node_modules") || filename.split(".").includes("svx")
         ? undefined
