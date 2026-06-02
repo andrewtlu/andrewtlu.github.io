@@ -87,6 +87,16 @@
     @apply list-disc;
     @apply pl-6;
   }
+
+  .post ol {
+    @apply list-decimal;
+    @apply pl-7;
+  }
+
+  .post ol li::marker {
+    @apply font-semibold;
+    @apply text-black;
+  }
 }
 
 @layer components {
