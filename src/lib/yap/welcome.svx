@@ -1,8 +1,28 @@
 ---
 title: welcome
-date: 1970-01-01T00:00:00Z
-posted: 2026-06-01T11:25:02+10:00
+date: !!str 1970-01-01T00:00:00Z
+posted: !!str 2026-06-01T11:25:02+10:00
 raw: >
+  # Welcome!
+
+  Probably no introduction needed, but as a reminder: [me](./). Welcome to my webpage!
+
+  This is intended to be my blog, and I don't plan on giving it a cohesive theme other than being a place for me to dump things I want to share but don't feel like sharing in a super accessible way. So if you're here congrats! I might write a post eventually about purposeful anti-efficiency, we'll see.
+
+  ## Guide
+
+  Currently the control group at the top right allows you to sort posts by newest(▼)/oldest(▲) date (more on this later) and to filter posts by content. The text filter does a simple includes comparison to the title, two dates, and raw text content of the post. I may add more nuanced search functionality later on and update this post.
+
+  Posts are given two dates:
+
+  - `dated` (since there's some stuff from before this webpage was made I want to share) which is the intended chronological ordering -- this is what posts are ordered by
+  - `posted` which will be the actual posting date (or an approximate of when I wrote it/finished it)
+
+  The little button next to the post title allows you to collapse/expand post content, in case there's too much going on.
+
+  If there's something you want me to write about, feel free to contact me (you'll find the info on the home page). Cheers!
+
+  Andrew
 ---
 
 # Welcome!

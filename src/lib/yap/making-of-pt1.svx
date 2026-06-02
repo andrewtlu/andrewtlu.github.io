@@ -1,0 +1,38 @@
+---
+title: making of (pt. 1)
+date: !!str 2026-06-01T23:16:13+10:00
+posted: !!str 2026-06-01T23:16:13+10:00
+minimized: true
+raw: >
+  So, for some context, if you're an og you may remember my old webpage:
+
+  ![old]($lib/assets/making-of/old.png)
+
+  I built this page at the end of 2023 -- at the time my CS club, PROJECT Emory, had engineers that needed support in web design and development -- I knew my way around backend development, so I decided to tackle a personal portfolio project to learn the basics of frontend development, both in design best practices and in tools such as Figma and React. If you're interested in my processes at the time, you can still find the old dev logs [here](https://github.com/andrewtlu/andrewtlu.github.io/tree/v1/dev_log).
+
+  However, after making the website (which did land me my first internship!), I didn't touch it after ending said internship, and it's remained the same since then. I've grown/changed a lot, and so has what I want to communicate to recruiters and other people visiting my site. I designed my old site to be much more "demo-y," but I've found many of the old features no longer necessary/aesthetically pleasing to myself. I also figured that since I've graduated from Emory, it's about time to spruce up the site.
+
+  So, while browsing around and looking at PROJECT Emory/Emory Hack's team members' profiles, I found our [lead engineer (Ethan)'s personal site](https://taehoonlee.dev/):
+
+  ![inspiration]($lib/assets/making-of/inspiration.png)
+
+  I loved how minimalistic yet sophisticated his page was, and decided I wanted to do something like this. I've also always wanted to have a blog of sorts. So, I settled on building a simple, monochrome(ish) webpage using spacing, text size, color, and weight to provide visual hierarchy and group content.
+
+  ...
+---
+
+So, for some context, if you're an og you may remember my old webpage:
+
+![old]($lib/assets/making-of/old.png)
+
+I built this page at the end of 2023 -- at the time my CS club, PROJECT Emory, had engineers that needed support in web design and development -- I knew my way around backend development, so I decided to tackle a personal portfolio project to learn the basics of frontend development, both in design best practices and in tools such as Figma and React. If you're interested in my processes at the time, you can still find the old dev logs [here](https://github.com/andrewtlu/andrewtlu.github.io/tree/v1/dev_log).
+
+However, after making the website (which did land me my first internship!), I didn't touch it after ending said internship, and it's remained the same since then. I've grown/changed a lot, and so has what I want to communicate to recruiters and other people visiting my site. I designed my old site to be much more "demo-y," but I've found many of the old features no longer necessary/aesthetically pleasing to myself. I also figured that since I've graduated from Emory, it's about time to spruce up the site.
+
+So, while browsing around and looking at PROJECT Emory/Emory Hack's team members' profiles, I found our [lead engineer (Ethan)'s personal site](https://taehoonlee.dev/):
+
+![inspiration]($lib/assets/making-of/inspiration.png)
+
+I loved how minimalistic yet sophisticated his page was, and decided I wanted to do something like this. I've also always wanted to have a blog of sorts. So, I settled on building a simple, monochrome(ish) webpage using spacing, text size, color, and weight to provide visual hierarchy and group content.
+
+...

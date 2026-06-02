@@ -8,6 +8,7 @@ declare module "*.svx" {
     title: string;
     date: string;
     posted: string;
+    minimized?: boolean;
     raw: string;
   };
 }
@@ -18,8 +19,9 @@ Example svx post:
 ```svx
 ---
 title: testing
-date: 2026-05-30T18:06:00Z
-posted: 2026-06-01T11:30:00Z;
+date: !!str 2026-05-30T18:06:00Z
+posted: !!str 2026-06-01T11:30:00Z;
+minimized: true
 raw: >
     # foo
 
@@ -32,7 +34,8 @@ bar
 ```
 
 title: string display title for the post
-date: iso 8601 format string date of the post
-posted: actual posting time
+date: iso 8601 format string date of the post -- !!str forces parser to parse as string, otherwise default wipes timezone!
+posted: actual posting time -- see above note
+minimized: whether a post should start minimized or not
 raw: indented content for the search functionality
 */

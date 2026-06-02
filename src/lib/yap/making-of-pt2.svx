@@ -1,0 +1,74 @@
+---
+title: making of (pt. 2)
+date: !!str 2026-06-02T15:18:29+10:00
+posted: !!str 2026-06-02T15:18:29+10:00
+minimized: true
+raw: >
+  ...
+
+  To get started, I decided to ditch React entirely. I've always been a huge fan of Svelte, and I figured the minimal, ordered philosophy behind Svelte gave me a developing experience similar to what I was going for on the user experience side. Additionally, while building the page itself I found some cool tools to help make developing this blog a bit easier.
+
+  My tech stack ended up being pretty slim:
+
+  - Svelte, TypeScript, Vite
+  - [SvelteKit](https://svelte.dev/docs/kit/adapter-static) for cleaner routing (paired with the static adapter for deployment via GitHub Pages)
+  - [tailwindcss](https://tailwindcss.com/docs/installation/using-vite) for a cleaner CSS experience
+  - [mdsvex](https://mdsvex.pngwn.io/) for preprocessing markdown (in order to write posts in markdown)
+  - You can also find all the code in [this website's GitHub repository](https://github.com/andrewtlu/andrewtlu.github.io)
+
+  I didn't use any component/style libraries or icon libraries because I found them unnecessary for what I was trying to do here.
+
+  ### The landing page
+
+  I decided to tackle the landing page first, as I was just going to do the bulk of the designing while setting up my pages. So, I set up the base page route (and a dummy blog route) and its layout, adding some filler content in order to mess with fonts, sizing, and spacing, before settling on a version similar to what is used now. I added some base global variables to reduce duplication (such as `<a>` styling or `<button>` effects) and finished up content.
+
+  Before moving on to the blog, I added a simple workflow to check code style and automatically build and deploy when pushed to main. I'm keeping things brief in this portion since the details were just standard Svelte development & debugging.
+
+  Then, I began working on the blog.
+
+  ### The blog
+
+  I initially began working on blog posts thinking I could keep blog posts as JSON files which would then be passed to a `<Post>` component which would render relevant metadata and content, and so I began developing expecting to go down this route.
+
+  I firstly added some dummy text and quickly discovered that my minimalistic styling from the landing page would need to be ironed out as there was not enough visual distinctiveness between posts, and I finally needed to include elements such as buttons. There wasn't much inspiration at this part of the process, and I instead just tried different shapes, spacings and layouts until I found something I vibed with. One thing I really liked from this whole process was using right-aligned text to denote a new post, which gave me some more freedom with styling of post content as I wouldn't need to rely solely on text weight or size to separate groups of text.
+
+  I then began writing my first post before quickly discovering some limitations. One notable one was that my current setup made it very difficult for me to add elements to posts such as titles, links, and images. I'd have to write my own processor, and it'd be easier to write HTML and inject it using Svelte's `{@html ...}` tag, neither of which were easy, and I really didn't want to write posts in HTML or Svelte if I could help it.
+
+  That's when I realized I could just use Markdown, or some suitable enough superset of Markdown, and translate it into HTML for the Svelte compiler to do its thing. After a quick google search I found some tools to do just that and settled with mdsvex.
+
+  ...
+---
+
+...
+
+To get started, I decided to ditch React entirely. I've always been a huge fan of Svelte, and I figured the minimal, ordered philosophy behind Svelte gave me a developing experience similar to what I was going for on the user experience side. Additionally, while building the page itself I found some cool tools to help make developing this blog a bit easier.
+
+My tech stack ended up being pretty slim:
+
+- Svelte, TypeScript, Vite
+- [SvelteKit](https://svelte.dev/docs/kit/adapter-static) for cleaner routing (paired with the static adapter for deployment via GitHub Pages)
+- [tailwindcss](https://tailwindcss.com/docs/installation/using-vite) for a cleaner CSS experience
+- [mdsvex](https://mdsvex.pngwn.io/) for preprocessing markdown (in order to write posts in markdown)
+- You can also find all the code in [this website's GitHub repository](https://github.com/andrewtlu/andrewtlu.github.io)
+
+I didn't use any component/style libraries or icon libraries because I found them unnecessary for what I was trying to do here.
+
+### The landing page
+
+I decided to tackle the landing page first, as I was just going to do the bulk of the designing while setting up my pages. So, I set up the base page route (and a dummy blog route) and its layout, adding some filler content in order to mess with fonts, sizing, and spacing, before settling on a version similar to what is used now. I added some base global variables to reduce duplication (such as `<a>` styling or `<button>` effects) and finished up content.
+
+Before moving on to the blog, I added a simple workflow to check code style and automatically build and deploy when pushed to main. I'm keeping things brief in this portion since the details were just standard Svelte development & debugging.
+
+Then, I began working on the blog.
+
+### The blog
+
+I initially began working on blog posts thinking I could keep blog posts as JSON files which would then be passed to a `<Post>` component which would render relevant metadata and content, and so I began developing expecting to go down this route.
+
+I firstly added some dummy text and quickly discovered that my minimalistic styling from the landing page would need to be ironed out as there was not enough visual distinctiveness between posts, and I finally needed to include elements such as buttons. There wasn't much inspiration at this part of the process, and I instead just tried different shapes, spacings and layouts until I found something I vibed with. One thing I really liked from this whole process was using right-aligned text to denote a new post, which gave me some more freedom with styling of post content as I wouldn't need to rely solely on text weight or size to separate groups of text.
+
+I then began writing my first post before quickly discovering some limitations. One notable one was that my current setup made it very difficult for me to add elements to posts such as titles, links, and images. I'd have to write my own processor, and it'd be easier to write HTML and inject it using Svelte's `{@html ...}` tag, neither of which were easy, and I really didn't want to write posts in HTML or Svelte if I could help it.
+
+That's when I realized I could just use Markdown, or some suitable enough superset of Markdown, and translate it into HTML for the Svelte compiler to do its thing. After a quick google search I found some tools to do just that and settled with mdsvex.
+
+...
