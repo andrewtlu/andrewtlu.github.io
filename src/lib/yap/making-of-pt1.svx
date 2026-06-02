@@ -2,6 +2,7 @@
 title: making of (pt. 1)
 date: !!str 2026-06-01T23:16:13+10:00
 posted: !!str 2026-06-01T23:16:13+10:00
+minimized: true
 raw: >
   So, for some context, if you're an og you may remember my old webpage:
 

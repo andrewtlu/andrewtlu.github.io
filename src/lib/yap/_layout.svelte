@@ -8,12 +8,22 @@ layout for posts, used by mdsvex
     title,
     date: _date,
     posted: _posted,
+    minimized,
     children,
-  }: { title: string; date: string; posted: string; children: Snippet } = $props();
+  }: {
+    title: string;
+    date: string;
+    posted: string;
+    minimized?: boolean;
+    children: Snippet;
+  } = $props();
+
   // commented out for now since I want to display og timezone, and I realized there's no sorting the list atm
   // let date = $derived(new Date(_date));
   // let posted = $derived(new Date(_posted));
-  let expanded = $state(true);
+
+  // svelte-ignore state_referenced_locally
+  let expanded = $state(minimized ? false : true);
 </script>
 
 <!-- TODO: retain og timezone while using Date object -->
