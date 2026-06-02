@@ -1,0 +1,54 @@
+---
+title: making of (pt. 3)
+date: !!str 2026-06-02T15:41:40+10:00
+posted: !!str 2026-06-02T15:41:40+10:00
+minimized: true
+raw: >
+  ...
+
+  mdsvex wasn't without its quirks though, and I needed to do some tweaking.
+
+  ##### mdsvex & Svelte 4
+
+  When I first installed mdsvex and tried displaying a dummy document, I ran into an issue where the Svelte compiler kept complaining about Svelte 4 incompatabilities. After doing some digging, I realized that the issue was that I'd forced the Svelte compiler to use runes across the project, only ignoring my `node_modules` folder. The issue was that the [mdsvex transformer is written in Svelte 4](https://github.com/pngwn/MDsveX/blob/950d624259985b42adad431507bf2bdc9adb58a2/packages/mdsvex/src/transformers/index.ts#L446), which when used by the mdsvex preprocesser generates perfectly fine Svelte 4 code but cannot be used in conjunction with Svelte 5 code.
+
+  Thankfully, this was easily fixed by excluding `*.svx` in the runes requirement, but there's some deeper underlying issues that may come into play later if I want to [include Svelte 5 components](https://github.com/pngwn/MDsveX/issues/485) into my posts. For now I'm planning on sticking with mdsvex but may have to either switch to something like markdoc-svelte or contribute to a Svelte 5 overhaul of mdsvex.
+
+  ##### Typing
+
+  This was a minor inconenience, but I didn't get module types from `*.svx` files out of the box and had to define an ambient module as described [in the docs](https://mdsvex.pngwn.io/docs#extensions). I didn't mind this as it allowed me to define some set types for my posts' frontmatter. One thing I haven't spent time fixing is the duplication of types between my `_layout.svelte` file, `svx.d.ts`, and `$routes/yap/+page.svelte`. I'll probably fix this somewhere down the road.
+
+  ##### Image Paths
+
+  The last memorable inconvenience was path resolutions in `*.svx` files. I discovered that in order to include images, I needed to include their paths from the `src/` directory. This was an easy fix via a [relative images plugin](https://github.com/mattjennings/mdsvex-relative-images).
+
+  ### Conclusion
+
+  Overall, I'm very happy with how the new webpage is turning out already. There's probably still more work to be done (as described above), but I'll fix things once they get annoying enough since everything just works right now. If you're reading this and in the process of learning web dev and/or building your own blog, I'd be happy to share more!
+
+  Andrew
+---
+
+...
+
+mdsvex wasn't without its quirks though, and I needed to do some tweaking.
+
+##### mdsvex & Svelte 4
+
+When I first installed mdsvex and tried displaying a dummy document, I ran into an issue where the Svelte compiler kept complaining about Svelte 4 incompatabilities. After doing some digging, I realized that the issue was that I'd forced the Svelte compiler to use runes across the project, only ignoring my `node_modules` folder. The issue was that the [mdsvex transformer is written in Svelte 4](https://github.com/pngwn/MDsveX/blob/950d624259985b42adad431507bf2bdc9adb58a2/packages/mdsvex/src/transformers/index.ts#L446), which when used by the mdsvex preprocesser generates perfectly fine Svelte 4 code but cannot be used in conjunction with Svelte 5 code.
+
+Thankfully, this was easily fixed by excluding `*.svx` in the runes requirement, but there's some deeper underlying issues that may come into play later if I want to [include Svelte 5 components](https://github.com/pngwn/MDsveX/issues/485) into my posts. For now I'm planning on sticking with mdsvex but may have to either switch to something like markdoc-svelte or contribute to a Svelte 5 overhaul of mdsvex.
+
+##### Typing
+
+This was a minor inconenience, but I didn't get module types from `*.svx` files out of the box and had to define an ambient module as described [in the docs](https://mdsvex.pngwn.io/docs#extensions). I didn't mind this as it allowed me to define some set types for my posts' frontmatter. One thing I haven't spent time fixing is the duplication of types between my `_layout.svelte` file, `svx.d.ts`, and `$routes/yap/+page.svelte`. I'll probably fix this somewhere down the road.
+
+##### Image Paths
+
+The last memorable inconvenience was path resolutions in `*.svx` files. I discovered that in order to include images, I needed to include their paths from the `src/` directory. This was an easy fix via a [relative images plugin](https://github.com/mattjennings/mdsvex-relative-images).
+
+### Conclusion
+
+Overall, I'm very happy with how the new webpage is turning out already. There's probably still more work to be done (as described above), but I'll fix things once they get annoying enough since everything just works right now. If you're reading this and in the process of learning web dev and/or building your own blog, I'd be happy to share more!
+
+Andrew
