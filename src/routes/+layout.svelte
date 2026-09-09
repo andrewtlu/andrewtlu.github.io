@@ -1,6 +1,6 @@
 <script lang="ts">
   import "../app.css";
-  import { resolve } from "$app/paths";
+  import { resolve, asset } from "$app/paths";
   import me from "$lib/assets/me.jpeg";
 
   let { children } = $props();
@@ -19,7 +19,7 @@
       <div class="max-w-1/2 text-right wrap-break-word">
         <a href="http://www.github.com/andrewtlu" target="_blank">github</a>
         <a href="https://www.linkedin.com/in/andrewtlu/" target="_blank">linkedin</a>
-        <!-- <a href="" target="_blank">resume</a> -->
+        <a href={asset("/andrewtlu-resume.pdf")} target="_blank">resume</a>
         <a href={resolve("/yap")}>yap</a>
       </div>
     </div>
